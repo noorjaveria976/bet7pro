@@ -1,0 +1,1157 @@
+<html lang="en" th="green">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="viewport"
+        content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-touch-fullscreen" content="YES">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="mobile-web-app-capable" content="YES">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://api.livepulsepro.com/live-tracking.js"></script>
+    <title>Client</title>
+
+    <link rel="stylesheet" crossorigin="" href="./assets/style.css">
+ 
+
+</head>
+
+<body class="antialiased">
+    <div id="app" data-v-app="">
+        <div class="h-screen flex flex-col overflow-hidden">
+            <header data-v-5fa84cd1="" id="header" class="bg-header-mobile">
+                <div data-v-5fa84cd1="" class="grid grid-cols-3 py-3 px-4">
+                    <div data-v-5fa84cd1="">
+                        <div data-v-5fa84cd1="" class="max-w-max rounded-2xl border border-white/25 px-2.5 py-1.5">
+                            <div data-v-5fa84cd1="" class="text-[11px] font-extrabold text-white">Offers</div>
+                        </div>
+                    </div>
+                    <div data-v-5fa84cd1="" class="flex justify-center"><a data-v-5fa84cd1="" href="/"
+                            class="router-link-active"><img data-v-5fa84cd1="" class="hm-Logo" src="img/betzon.png"></a>
+                    </div>
+
+                    <!-- Header Right Section -->
+                    <!-- Header Right Side -->
+                    <div class="dropdown-wrapper flex justify-end">
+                        <!-- Toggle Button -->
+                        <button id="dropdownToggle" class="dropdown-toggle">
+                            <span class="balance">0.14 EUR</span>
+                            <i class="ri-user-line" style="font-size: 20px;"></i>
+                        </button>
+
+                        <!-- Dropdown Menu -->
+                        <div class="dropdown" id="dropdownMenu">
+                            <!-- Header inside dropdown -->
+                            <div class="dropdown-header">
+                                <p class="username">mt</p>
+                                <p class="user-balance">0.14 <span class="currency">EUR</span></p>
+                            </div>
+
+                            <!-- Links -->
+                            <a href="user_chat.html">Chat</a>
+                            <a href="user_finance.html">Finance</a>
+                            <a href="user_account.html">My Account</a>
+                            <a href="user_settings.html">Settings</a>
+                            <a href="user_terms.html">Terms & Conditions</a>
+                            <a href="user_password.html">Change Password</a>
+                            <button type="button">Log Out</button>
+                        </div>
+                    </div>
+
+                </div>
+                <nav data-v-5fa84cd1="" class="flex justify-between md:justify-center md:gap-10 px-8"><a
+                        data-v-5fa84cd1="" href="allSuport.html" class="router-link-active hm-Link py-3.5">All
+                        Sports</a><a data-v-5fa84cd1="" href="inplay_football.html"
+                        class="router-link-active router-link-exact-active hm-Link py-3.5"
+                        aria-current="page">In-Play</a><a data-v-5fa84cd1="" href="mybets.html"
+                        class="hm-Link py-3.5">My
+                        Bets</a><a data-v-5fa84cd1="" href="casino.html" class="hm-Link py-3.5">
+                        <div data-v-5fa84cd1="" class="relative">Casino <img data-v-5fa84cd1="" src="img/sh.png"
+                                class="w-6 h-6 absolute right-[-16px] top-[-16px]"></div>
+                    </a></nav>
+            </header>
+            <main class="pageView w-full flex-1 overflow-auto">
+                <div data-v-a90b1c42="" data-v-6ffe0df7="" class="w-full py-2.5">
+                            <ul data-v-a90b1c42="" class="px-3 list-none flex space-x-4 w-full overflow-x-auto">
+                                <li data-v-a90b1c42=""><a data-v-a90b1c42="" 
+                                        class="flex flex-col items-center justify-center mt-1">
+                                        <div data-v-a90b1c42="" class="SearchBar_Icon"></div>
+                                        <p data-v-a90b1c42=""
+                                            class="text-[11px] text-white font-bold mt-1 whitespace-nowrap">Search</p>
+                                    </a></li>
+                                <li data-v-a90b1c42=""><a data-v-a90b1c42="" href="./event.html"
+                                        class="flex flex-col items-center justify-center mt-1">
+                                        <div data-v-a90b1c42="" class="Calendar"></div>
+                                        <p data-v-a90b1c42=""
+                                            class="text-[11px] text-white font-bold mt-1 whitespace-nowrap">Events</p>
+                                    </a></li>
+                                <li data-v-a90b1c42=""><a data-v-a90b1c42="" href="./football.html"
+                                        class="flex flex-col items-center justify-center py-2.5"><img data-v-a90b1c42=""
+                                            src="./img/6046.svg" class="w-6 h-6">
+                                        <p data-v-a90b1c42=""
+                                            class="text-[11px] text-white font-bold mt-1 whitespace-nowrap">Football</p>
+                                    </a></li>
+                                <li data-v-a90b1c42=""><a data-v-a90b1c42="" href="./basketball.html"
+                                        class="flex flex-col items-center justify-center py-2.5"><img data-v-a90b1c42=""
+                                            src="./img/48242.svg" class="w-6 h-6">
+                                        <p data-v-a90b1c42=""
+                                            class="text-[11px] text-white font-bold mt-1 whitespace-nowrap">Basketball
+                                        </p>
+                                    </a></li>
+                                <li data-v-a90b1c42=""><a data-v-a90b1c42="" href="./tenis.html"
+                                        class="flex flex-col items-center justify-center py-2.5"><img data-v-a90b1c42=""
+                                            src="./img/54094.svg" class="w-6 h-6">
+                                        <p data-v-a90b1c42=""
+                                            class="text-[11px] text-white font-bold mt-1 whitespace-nowrap">Tennis</p>
+                                    </a></li>
+                                <li data-v-a90b1c42=""><a data-v-a90b1c42="" href="./tableTenis.html"
+                                        class="flex flex-col items-center justify-center py-2.5"><img data-v-a90b1c42=""
+                                            src="./img/265917.svg" class="w-6 h-6">
+                                        <p data-v-a90b1c42=""
+                                            class="text-[11px] text-white font-bold mt-1 whitespace-nowrap">Table Tennis
+                                        </p>
+                                    </a></li>
+                                <li data-v-a90b1c42=""><a data-v-a90b1c42="" href="./VolleyBol.html"
+                                        class="flex flex-col items-center justify-center py-2.5"><img data-v-a90b1c42=""
+                                            src="./img/154830.svg" class="w-6 h-6">
+                                        <p data-v-a90b1c42=""
+                                            class="text-[11px] text-white font-bold mt-1 whitespace-nowrap">Volleyball
+                                        </p>
+                                    </a></li>
+                                <li data-v-a90b1c42=""><a data-v-a90b1c42="" href="./hendboll.html"
+                                        class="flex flex-col items-center justify-center py-2.5"><img data-v-a90b1c42=""
+                                            src="./img/35709.svg" class="w-6 h-6">
+                                        <p data-v-a90b1c42=""
+                                            class="text-[11px] text-white font-bold mt-1 whitespace-nowrap">Handball</p>
+                                    </a></li>
+                                <li data-v-a90b1c42=""><a data-v-a90b1c42="" href="./hockey.html"
+                                        class="flex flex-col items-center justify-center py-2.5"><img data-v-a90b1c42=""
+                                            src="./img/35232.svg" class="w-6 h-6">
+                                        <p data-v-a90b1c42=""
+                                            class="text-[11px] text-white font-bold mt-1 whitespace-nowrap">Ice Hockey
+                                        </p>
+                                    </a></li>
+                            </ul>
+                        </div>
+                <div>
+                    <div class="px-2 py-1.5">
+                        <ul class="list-none flex space-x-1 overflow-x-auto">
+                            <!-- Day Buttons -->
+                            <li><button class="day-btn w-14 text-center py-1 rounded-sm bg-[var(--color-primary3)]"
+                                    data-day="sun">
+                                    <p class="text-black text-sm font-bold">Sun</p>
+                                    <p class="text-xs">05</p>
+                                </button></li>
+                            <li><button class="day-btn w-14 text-center py-1 rounded-sm bg-neutral-500" data-day="mon">
+                                    <p class="text-black text-sm font-bold">Mon</p>
+                                    <p class="text-xs">06</p>
+                                </button></li>
+                            <li><button class="day-btn w-14 text-center py-1 rounded-sm bg-neutral-500" data-day="tue">
+                                    <p class="text-black text-sm font-bold">Tue</p>
+                                    <p class="text-xs">07</p>
+                                </button></li>
+                            <li><button class="day-btn w-14 text-center py-1 rounded-sm bg-neutral-500" data-day="wed">
+                                    <p class="text-black text-sm font-bold">Wed</p>
+                                    <p class="text-xs">08</p>
+                                </button></li>
+                                     <li><button class="day-btn w-14 text-center py-1 rounded-sm bg-neutral-500" data-day="thurs">
+                                    <p class="text-black text-sm font-bold">Thurs</p>
+                                    <p class="text-xs">07</p>
+                                </button></li>
+                            <li><button class="day-btn w-14 text-center py-1 rounded-sm bg-neutral-500" data-day="frid">
+                                    <p class="text-black text-sm font-bold">Frid</p>
+                                    <p class="text-xs">08</p>
+                                </button></li>
+                                     <li><button class="day-btn w-14 text-center py-1 rounded-sm bg-neutral-500" data-day="saturday">
+                                    <p class="text-black text-sm font-bold">Sat</p>
+                                    <p class="text-xs">07</p>
+                                </button></li>
+                          
+                        </ul>
+                    </div>
+
+                    <!-- Matches container -->
+                    <div id="days-content">
+                        <!-- Sunday -->
+                        <div class="day-content" data-day="sun">
+                            <div class="bg-[var(--color-white7)] min-h-9 grid grid-cols-2 px-2 xl:pl-7 mt-3 text-white">
+                                <div class="flex items-center">
+                                    <img src="/loc/215.svg" class="w-4 h-4 rounded-full mr-2" alt="">
+                               Germany - Bundesliga
+                                </div>
+                                <div class="grid grid-cols-3 text-center">
+                                    <p class="mdg-Text">1</p>
+                                    <p class="mdg-Text">X</p>
+                                    <p class="mdg-Text">2</p>
+                                </div>
+                            </div>
+
+                            <ul class="list-none divide-y divide-neutral-700/75">
+                                <li>
+                                    <div data-v-645cd0d6="" class="ev-Box">
+                                        <div data-v-645cd0d6=""
+                                            class="px-2 xl:px-7 my-3.5 flex gap-1 border-r border-neutral-600/50">
+                                            <div data-v-645cd0d6="" class="overflow-hidden">
+                                                <div data-v-645cd0d6="" class="ev-Teams">
+                                                    <div data-v-645cd0d6="" class="flex items-center gap-1">
+                                                        <div data-v-645cd0d6=""><img data-v-645cd0d6=""
+                                                                src="https://logosapp.info/teams/725.png"
+                                                                class="w-[11px] h-[11px] object-contain min-w-[11px]">
+                                                        </div>
+                                                        <p data-v-645cd0d6="" class="ev-Participant">Juventus</p>
+                                                        <!----><!---->
+                                                    </div>
+                                                    <div data-v-645cd0d6="" class="flex items-center gap-1">
+                                                        <div data-v-645cd0d6=""><img data-v-645cd0d6=""
+                                                                src="https://logosapp.info/teams/728.png"
+                                                                class="w-[11px] h-[11px] object-contain min-w-[11px]">
+                                                        </div>
+                                                        <p data-v-645cd0d6="" class="ev-Participant">AC Milan</p>
+                                                        <!----><!---->
+                                                    </div>
+                                                </div><!---->
+                                                <div data-v-645cd0d6="" class="ev-Time">
+                                                    <p data-v-645cd0d6="" class="text-[11px] text-white opacity-75">
+                                                        23:45</p>
+                                                    <div data-v-645cd0d6=""
+                                                        class="text-[11px] bg-[var(--color-primary5)] font-bold px-0.5 rounded-sm flex items-center h-3 ml-2">
+                                                        <span data-v-645cd0d6="">2994 »</span>
+                                                    </div>
+                                                </div>
+                                            </div><!----><!---->
+                                        </div>
+                                        <div data-v-645cd0d6="">
+                                            <ul data-v-645cd0d6="" class="list-none flex h-full">
+                                                <li data-v-645cd0d6="" class="flex-1">
+                                                    <div data-v-03867fb3="" data-v-645cd0d6=""
+                                                        class="h-full flex flex-col items-center justify-center cursor-pointer odd w-full hover:bg-[var(--color-white15)]">
+                                                        <p data-v-03867fb3=""
+                                                            class="text-[13px] text-[var(--color-yellow1)]"><!----><span
+                                                                data-v-03867fb3="" class="text-[13px] mt-1">2.70</span>
+                                                        </p>
+                                                    </div>
+                                                </li>
+                                                <li data-v-645cd0d6="" class="flex-1">
+                                                    <div data-v-03867fb3="" data-v-645cd0d6=""
+                                                        class="h-full flex flex-col items-center justify-center cursor-pointer odd w-full hover:bg-[var(--color-white15)]">
+                                                        <p data-v-03867fb3=""
+                                                            class="text-[13px] text-[var(--color-yellow1)]"><!----><span
+                                                                data-v-03867fb3="" class="text-[13px] mt-1">3.20</span>
+                                                        </p>
+                                                    </div>
+                                                </li>
+                                                <li data-v-645cd0d6="" class="flex-1">
+                                                    <div data-v-03867fb3="" data-v-645cd0d6=""
+                                                        class="h-full flex flex-col items-center justify-center cursor-pointer odd w-full hover:bg-[var(--color-white15)]">
+                                                        <p data-v-03867fb3=""
+                                                            class="text-[13px] text-[var(--color-yellow1)]"><!----><span
+                                                                data-v-03867fb3="" class="text-[13px] mt-1">2.70</span>
+                                                        </p>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div data-v-645cd0d6="" class="ev-Box">
+                                        <div data-v-645cd0d6=""
+                                            class="px-2 xl:px-7 my-3.5 flex gap-1 border-r border-neutral-600/50">
+                                            <div data-v-645cd0d6="" class="overflow-hidden">
+                                                <div data-v-645cd0d6="" class="ev-Teams">
+                                                    <div data-v-645cd0d6="" class="flex items-center gap-1">
+                                                        <div data-v-645cd0d6=""><img data-v-645cd0d6=""
+                                                                src="https://logosapp.info/teams/1058.png"
+                                                                class="w-[11px] h-[11px] object-contain min-w-[11px]">
+                                                        </div>
+                                                        <p data-v-645cd0d6="" class="ev-Participant">Napoli</p>
+                                                        <!----><!---->
+                                                    </div>
+                                                    <div data-v-645cd0d6="" class="flex items-center gap-1">
+                                                        <div data-v-645cd0d6=""><img data-v-645cd0d6=""
+                                                                src="https://logosapp.info/teams/1057.png"
+                                                                class="w-[11px] h-[11px] object-contain min-w-[11px]">
+                                                        </div>
+                                                        <p data-v-645cd0d6="" class="ev-Participant">Genoa</p>
+                                                        <!----><!---->
+                                                    </div>
+                                                </div><!---->
+                                                <div data-v-645cd0d6="" class="ev-Time">
+                                                    <p data-v-645cd0d6="" class="text-[11px] text-white opacity-75">
+                                                        21:00</p>
+                                                    <div data-v-645cd0d6=""
+                                                        class="text-[11px] bg-[var(--color-primary5)] font-bold px-0.5 rounded-sm flex items-center h-3 ml-2">
+                                                        <span data-v-645cd0d6="">2979 »</span>
+                                                    </div>
+                                                </div>
+                                            </div><!----><!---->
+                                        </div>
+                                        <div data-v-645cd0d6="">
+                                            <ul data-v-645cd0d6="" class="list-none flex h-full">
+                                                <li data-v-645cd0d6="" class="flex-1">
+                                                    <div data-v-03867fb3="" data-v-645cd0d6=""
+                                                        class="h-full flex flex-col items-center justify-center cursor-pointer odd w-full hover:bg-[var(--color-white15)]">
+                                                        <p data-v-03867fb3=""
+                                                            class="text-[13px] text-[var(--color-yellow1)]"><!----><span
+                                                                data-v-03867fb3="" class="text-[13px] mt-1">1.48</span>
+                                                        </p>
+                                                    </div>
+                                                </li>
+                                                <li data-v-645cd0d6="" class="flex-1">
+                                                    <div data-v-03867fb3="" data-v-645cd0d6=""
+                                                        class="h-full flex flex-col items-center justify-center cursor-pointer odd w-full hover:bg-[var(--color-white15)]">
+                                                        <p data-v-03867fb3=""
+                                                            class="text-[13px] text-[var(--color-yellow1)]"><!----><span
+                                                                data-v-03867fb3="" class="text-[13px] mt-1">3.90</span>
+                                                        </p>
+                                                    </div>
+                                                </li>
+                                                <li data-v-645cd0d6="" class="flex-1">
+                                                    <div data-v-03867fb3="" data-v-645cd0d6=""
+                                                        class="h-full flex flex-col items-center justify-center cursor-pointer odd w-full hover:bg-[var(--color-white15)]">
+                                                        <p data-v-03867fb3=""
+                                                            class="text-[13px] text-[var(--color-yellow1)]"><!----><span
+                                                                data-v-03867fb3="" class="text-[13px] mt-1">8.50</span>
+                                                        </p>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Monday -->
+                        <div class="day-content hidden" data-day="mon">
+                            <div class="bg-[var(--color-white7)] min-h-9 grid grid-cols-2 px-2 xl:pl-7 mt-3 text-white">
+                                <div class="flex items-center">
+                                    <img src="/loc/215.svg" class="w-4 h-4 rounded-full mr-2" alt="">
+                                  Portugal - Primeira Liga
+                                </div>
+                                <div class="grid grid-cols-3 text-center">
+                                    <p class="mdg-Text">1</p>
+                                    <p class="mdg-Text">X</p>
+                                    <p class="mdg-Text">2</p>
+                                </div>
+                            </div>
+
+                            <ul class="list-none divide-y divide-neutral-700/75">
+                                <li>
+                                    <div data-v-645cd0d6="" class="ev-Box">
+                                        <div data-v-645cd0d6=""
+                                            class="px-2 xl:px-7 my-3.5 flex gap-1 border-r border-neutral-600/50">
+                                            <div data-v-645cd0d6="" class="overflow-hidden">
+                                                <div data-v-645cd0d6="" class="ev-Teams">
+                                                    <div data-v-645cd0d6="" class="flex items-center gap-1">
+                                                        <div data-v-645cd0d6=""><img data-v-645cd0d6=""
+                                                                src="https://logosapp.info/teams/1001.png"
+                                                                class="w-[11px] h-[11px] object-contain min-w-[11px]">
+                                                        </div>
+                                                        <p data-v-645cd0d6="" class="ev-Participant">Brentford</p>
+                                                        <!----><!---->
+                                                    </div>
+                                                    <div data-v-645cd0d6="" class="flex items-center gap-1">
+                                                        <div data-v-645cd0d6=""><img data-v-645cd0d6=""
+                                                                src="https://logosapp.info/teams/984.png"
+                                                                class="w-[11px] h-[11px] object-contain min-w-[11px]">
+                                                        </div>
+                                                        <p data-v-645cd0d6="" class="ev-Participant">Manchester City</p>
+                                                        <!----><!---->
+                                                    </div>
+                                                </div><!---->
+                                                <div data-v-645cd0d6="" class="ev-Time">
+                                                    <p data-v-645cd0d6="" class="text-[11px] text-white opacity-75">
+                                                        20:30</p>
+                                                    <div data-v-645cd0d6=""
+                                                        class="text-[11px] bg-[var(--color-primary5)] font-bold px-0.5 rounded-sm flex items-center h-3 ml-2">
+                                                        <span data-v-645cd0d6="">3026 »</span>
+                                                    </div>
+                                                </div>
+                                            </div><!----><!---->
+                                        </div>
+                                        <div data-v-645cd0d6="">
+                                            <ul data-v-645cd0d6="" class="list-none flex h-full">
+                                                <li data-v-645cd0d6="" class="flex-1">
+                                                    <div data-v-03867fb3="" data-v-645cd0d6=""
+                                                        class="h-full flex flex-col items-center justify-center cursor-pointer odd w-full hover:bg-[var(--color-white15)]">
+                                                        <p data-v-03867fb3=""
+                                                            class="text-[13px] text-[var(--color-yellow1)]"><!----><span
+                                                                data-v-03867fb3="" class="text-[13px] mt-1">5.00</span>
+                                                        </p>
+                                                    </div>
+                                                </li>
+                                                <li data-v-645cd0d6="" class="flex-1">
+                                                    <div data-v-03867fb3="" data-v-645cd0d6=""
+                                                        class="h-full flex flex-col items-center justify-center cursor-pointer odd w-full hover:bg-[var(--color-white15)]">
+                                                        <p data-v-03867fb3=""
+                                                            class="text-[13px] text-[var(--color-yellow1)]"><!----><span
+                                                                data-v-03867fb3="" class="text-[13px] mt-1">4.20</span>
+                                                        </p>
+                                                    </div>
+                                                </li>
+                                                <li data-v-645cd0d6="" class="flex-1">
+                                                    <div data-v-03867fb3="" data-v-645cd0d6=""
+                                                        class="h-full flex flex-col items-center justify-center cursor-pointer odd w-full hover:bg-[var(--color-white15)]">
+                                                        <p data-v-03867fb3=""
+                                                            class="text-[13px] text-[var(--color-yellow1)]"><!----><span
+                                                                data-v-03867fb3="" class="text-[13px] mt-1">1.62</span>
+                                                        </p>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Tuesday -->
+                        <div class="day-content hidden" data-day="tue">
+                        <div class="bg-[var(--color-white7)] min-h-9 grid grid-cols-2 px-2 xl:pl-7 mt-3 text-white">
+                                <div class="flex items-center">
+                                    <img src="/loc/215.svg" class="w-4 h-4 rounded-full mr-2" alt="">
+                                 Spain - LaLiga
+                                </div>
+                                <div class="grid grid-cols-3 text-center">
+                                    <p class="mdg-Text">1</p>
+                                    <p class="mdg-Text">X</p>
+                                    <p class="mdg-Text">2</p>
+                                </div>
+                            </div>
+
+                            <ul class="list-none divide-y divide-neutral-700/75">
+                                <li>
+                                    <div data-v-645cd0d6="" class="ev-Box">
+                                        <div data-v-645cd0d6=""
+                                            class="px-2 xl:px-7 my-3.5 flex gap-1 border-r border-neutral-600/50">
+                                            <div data-v-645cd0d6="" class="overflow-hidden">
+                                                <div data-v-645cd0d6="" class="ev-Teams">
+                                                    <div data-v-645cd0d6="" class="flex items-center gap-1">
+                                                        <div data-v-645cd0d6=""><img data-v-645cd0d6=""
+                                                                src="https://logosapp.info/teams/725.png"
+                                                                class="w-[11px] h-[11px] object-contain min-w-[11px]">
+                                                        </div>
+                                                        <p data-v-645cd0d6="" class="ev-Participant">Juventus</p>
+                                                        <!----><!---->
+                                                    </div>
+                                                    <div data-v-645cd0d6="" class="flex items-center gap-1">
+                                                        <div data-v-645cd0d6=""><img data-v-645cd0d6=""
+                                                                src="https://logosapp.info/teams/728.png"
+                                                                class="w-[11px] h-[11px] object-contain min-w-[11px]">
+                                                        </div>
+                                                        <p data-v-645cd0d6="" class="ev-Participant">AC Milan</p>
+                                                        <!----><!---->
+                                                    </div>
+                                                </div><!---->
+                                                <div data-v-645cd0d6="" class="ev-Time">
+                                                    <p data-v-645cd0d6="" class="text-[11px] text-white opacity-75">
+                                                        23:45</p>
+                                                    <div data-v-645cd0d6=""
+                                                        class="text-[11px] bg-[var(--color-primary5)] font-bold px-0.5 rounded-sm flex items-center h-3 ml-2">
+                                                        <span data-v-645cd0d6="">2994 »</span>
+                                                    </div>
+                                                </div>
+                                            </div><!----><!---->
+                                        </div>
+                                        <div data-v-645cd0d6="">
+                                            <ul data-v-645cd0d6="" class="list-none flex h-full">
+                                                <li data-v-645cd0d6="" class="flex-1">
+                                                    <div data-v-03867fb3="" data-v-645cd0d6=""
+                                                        class="h-full flex flex-col items-center justify-center cursor-pointer odd w-full hover:bg-[var(--color-white15)]">
+                                                        <p data-v-03867fb3=""
+                                                            class="text-[13px] text-[var(--color-yellow1)]"><!----><span
+                                                                data-v-03867fb3="" class="text-[13px] mt-1">2.70</span>
+                                                        </p>
+                                                    </div>
+                                                </li>
+                                                <li data-v-645cd0d6="" class="flex-1">
+                                                    <div data-v-03867fb3="" data-v-645cd0d6=""
+                                                        class="h-full flex flex-col items-center justify-center cursor-pointer odd w-full hover:bg-[var(--color-white15)]">
+                                                        <p data-v-03867fb3=""
+                                                            class="text-[13px] text-[var(--color-yellow1)]"><!----><span
+                                                                data-v-03867fb3="" class="text-[13px] mt-1">3.20</span>
+                                                        </p>
+                                                    </div>
+                                                </li>
+                                                <li data-v-645cd0d6="" class="flex-1">
+                                                    <div data-v-03867fb3="" data-v-645cd0d6=""
+                                                        class="h-full flex flex-col items-center justify-center cursor-pointer odd w-full hover:bg-[var(--color-white15)]">
+                                                        <p data-v-03867fb3=""
+                                                            class="text-[13px] text-[var(--color-yellow1)]"><!----><span
+                                                                data-v-03867fb3="" class="text-[13px] mt-1">2.70</span>
+                                                        </p>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div data-v-645cd0d6="" class="ev-Box">
+                                        <div data-v-645cd0d6=""
+                                            class="px-2 xl:px-7 my-3.5 flex gap-1 border-r border-neutral-600/50">
+                                            <div data-v-645cd0d6="" class="overflow-hidden">
+                                                <div data-v-645cd0d6="" class="ev-Teams">
+                                                    <div data-v-645cd0d6="" class="flex items-center gap-1">
+                                                        <div data-v-645cd0d6=""><img data-v-645cd0d6=""
+                                                                src="https://logosapp.info/teams/1058.png"
+                                                                class="w-[11px] h-[11px] object-contain min-w-[11px]">
+                                                        </div>
+                                                        <p data-v-645cd0d6="" class="ev-Participant">Napoli</p>
+                                                        <!----><!---->
+                                                    </div>
+                                                    <div data-v-645cd0d6="" class="flex items-center gap-1">
+                                                        <div data-v-645cd0d6=""><img data-v-645cd0d6=""
+                                                                src="https://logosapp.info/teams/1057.png"
+                                                                class="w-[11px] h-[11px] object-contain min-w-[11px]">
+                                                        </div>
+                                                        <p data-v-645cd0d6="" class="ev-Participant">Genoa</p>
+                                                        <!----><!---->
+                                                    </div>
+                                                </div><!---->
+                                                <div data-v-645cd0d6="" class="ev-Time">
+                                                    <p data-v-645cd0d6="" class="text-[11px] text-white opacity-75">
+                                                        21:00</p>
+                                                    <div data-v-645cd0d6=""
+                                                        class="text-[11px] bg-[var(--color-primary5)] font-bold px-0.5 rounded-sm flex items-center h-3 ml-2">
+                                                        <span data-v-645cd0d6="">2979 »</span>
+                                                    </div>
+                                                </div>
+                                            </div><!----><!---->
+                                        </div>
+                                        <div data-v-645cd0d6="">
+                                            <ul data-v-645cd0d6="" class="list-none flex h-full">
+                                                <li data-v-645cd0d6="" class="flex-1">
+                                                    <div data-v-03867fb3="" data-v-645cd0d6=""
+                                                        class="h-full flex flex-col items-center justify-center cursor-pointer odd w-full hover:bg-[var(--color-white15)]">
+                                                        <p data-v-03867fb3=""
+                                                            class="text-[13px] text-[var(--color-yellow1)]"><!----><span
+                                                                data-v-03867fb3="" class="text-[13px] mt-1">1.48</span>
+                                                        </p>
+                                                    </div>
+                                                </li>
+                                                <li data-v-645cd0d6="" class="flex-1">
+                                                    <div data-v-03867fb3="" data-v-645cd0d6=""
+                                                        class="h-full flex flex-col items-center justify-center cursor-pointer odd w-full hover:bg-[var(--color-white15)]">
+                                                        <p data-v-03867fb3=""
+                                                            class="text-[13px] text-[var(--color-yellow1)]"><!----><span
+                                                                data-v-03867fb3="" class="text-[13px] mt-1">3.90</span>
+                                                        </p>
+                                                    </div>
+                                                </li>
+                                                <li data-v-645cd0d6="" class="flex-1">
+                                                    <div data-v-03867fb3="" data-v-645cd0d6=""
+                                                        class="h-full flex flex-col items-center justify-center cursor-pointer odd w-full hover:bg-[var(--color-white15)]">
+                                                        <p data-v-03867fb3=""
+                                                            class="text-[13px] text-[var(--color-yellow1)]"><!----><span
+                                                                data-v-03867fb3="" class="text-[13px] mt-1">8.50</span>
+                                                        </p>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Wednesday -->
+                        <div class="day-content hidden" data-day="wed">
+                          <div class="bg-[var(--color-white7)] min-h-9 grid grid-cols-2 px-2 xl:pl-7 mt-3 text-white">
+                                <div class="flex items-center">
+                                    <img src="/loc/215.svg" class="w-4 h-4 rounded-full mr-2" alt="">
+                                    England - Premier League
+                                </div>
+                                <div class="grid grid-cols-3 text-center">
+                                    <p class="mdg-Text">1</p>
+                                    <p class="mdg-Text">X</p>
+                                    <p class="mdg-Text">2</p>
+                                </div>
+                            </div>
+
+                            <ul class="list-none divide-y divide-neutral-700/75">
+                                <li>
+                                    <div data-v-645cd0d6="" class="ev-Box">
+                                        <div data-v-645cd0d6=""
+                                            class="px-2 xl:px-7 my-3.5 flex gap-1 border-r border-neutral-600/50">
+                                            <div data-v-645cd0d6="" class="overflow-hidden">
+                                                <div data-v-645cd0d6="" class="ev-Teams">
+                                                    <div data-v-645cd0d6="" class="flex items-center gap-1">
+                                                        <div data-v-645cd0d6=""><img data-v-645cd0d6=""
+                                                                src="https://logosapp.info/teams/1001.png"
+                                                                class="w-[11px] h-[11px] object-contain min-w-[11px]">
+                                                        </div>
+                                                        <p data-v-645cd0d6="" class="ev-Participant">Brentford</p>
+                                                        <!----><!---->
+                                                    </div>
+                                                    <div data-v-645cd0d6="" class="flex items-center gap-1">
+                                                        <div data-v-645cd0d6=""><img data-v-645cd0d6=""
+                                                                src="https://logosapp.info/teams/984.png"
+                                                                class="w-[11px] h-[11px] object-contain min-w-[11px]">
+                                                        </div>
+                                                        <p data-v-645cd0d6="" class="ev-Participant">Manchester City</p>
+                                                        <!----><!---->
+                                                    </div>
+                                                </div><!---->
+                                                <div data-v-645cd0d6="" class="ev-Time">
+                                                    <p data-v-645cd0d6="" class="text-[11px] text-white opacity-75">
+                                                        20:30</p>
+                                                    <div data-v-645cd0d6=""
+                                                        class="text-[11px] bg-[var(--color-primary5)] font-bold px-0.5 rounded-sm flex items-center h-3 ml-2">
+                                                        <span data-v-645cd0d6="">3026 »</span>
+                                                    </div>
+                                                </div>
+                                            </div><!----><!---->
+                                        </div>
+                                        <div data-v-645cd0d6="">
+                                            <ul data-v-645cd0d6="" class="list-none flex h-full">
+                                                <li data-v-645cd0d6="" class="flex-1">
+                                                    <div data-v-03867fb3="" data-v-645cd0d6=""
+                                                        class="h-full flex flex-col items-center justify-center cursor-pointer odd w-full hover:bg-[var(--color-white15)]">
+                                                        <p data-v-03867fb3=""
+                                                            class="text-[13px] text-[var(--color-yellow1)]"><!----><span
+                                                                data-v-03867fb3="" class="text-[13px] mt-1">5.00</span>
+                                                        </p>
+                                                    </div>
+                                                </li>
+                                                <li data-v-645cd0d6="" class="flex-1">
+                                                    <div data-v-03867fb3="" data-v-645cd0d6=""
+                                                        class="h-full flex flex-col items-center justify-center cursor-pointer odd w-full hover:bg-[var(--color-white15)]">
+                                                        <p data-v-03867fb3=""
+                                                            class="text-[13px] text-[var(--color-yellow1)]"><!----><span
+                                                                data-v-03867fb3="" class="text-[13px] mt-1">4.20</span>
+                                                        </p>
+                                                    </div>
+                                                </li>
+                                                <li data-v-645cd0d6="" class="flex-1">
+                                                    <div data-v-03867fb3="" data-v-645cd0d6=""
+                                                        class="h-full flex flex-col items-center justify-center cursor-pointer odd w-full hover:bg-[var(--color-white15)]">
+                                                        <p data-v-03867fb3=""
+                                                            class="text-[13px] text-[var(--color-yellow1)]"><!----><span
+                                                                data-v-03867fb3="" class="text-[13px] mt-1">1.62</span>
+                                                        </p>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                         <div class="day-content hidden" data-day="thurs">
+                           <div class="bg-[var(--color-white7)] min-h-9 grid grid-cols-2 px-2 xl:pl-7 mt-3 text-white">
+                                <div class="flex items-center">
+                                    <img src="/loc/215.svg" class="w-4 h-4 rounded-full mr-2" alt="">
+                                   Sweden - Superettan
+                                </div>
+                                <div class="grid grid-cols-3 text-center">
+                                    <p class="mdg-Text">1</p>
+                                    <p class="mdg-Text">X</p>
+                                    <p class="mdg-Text">2</p>
+                                </div>
+                            </div>
+
+                            <ul class="list-none divide-y divide-neutral-700/75">
+                                <li>
+                                    <div data-v-645cd0d6="" class="ev-Box">
+                                        <div data-v-645cd0d6=""
+                                            class="px-2 xl:px-7 my-3.5 flex gap-1 border-r border-neutral-600/50">
+                                            <div data-v-645cd0d6="" class="overflow-hidden">
+                                                <div data-v-645cd0d6="" class="ev-Teams">
+                                                    <div data-v-645cd0d6="" class="flex items-center gap-1">
+                                                        <div data-v-645cd0d6=""><img data-v-645cd0d6=""
+                                                                src="https://logosapp.info/teams/725.png"
+                                                                class="w-[11px] h-[11px] object-contain min-w-[11px]">
+                                                        </div>
+                                                        <p data-v-645cd0d6="" class="ev-Participant">Juventus</p>
+                                                        <!----><!---->
+                                                    </div>
+                                                    <div data-v-645cd0d6="" class="flex items-center gap-1">
+                                                        <div data-v-645cd0d6=""><img data-v-645cd0d6=""
+                                                                src="https://logosapp.info/teams/728.png"
+                                                                class="w-[11px] h-[11px] object-contain min-w-[11px]">
+                                                        </div>
+                                                        <p data-v-645cd0d6="" class="ev-Participant">AC Milan</p>
+                                                        <!----><!---->
+                                                    </div>
+                                                </div><!---->
+                                                <div data-v-645cd0d6="" class="ev-Time">
+                                                    <p data-v-645cd0d6="" class="text-[11px] text-white opacity-75">
+                                                        23:45</p>
+                                                    <div data-v-645cd0d6=""
+                                                        class="text-[11px] bg-[var(--color-primary5)] font-bold px-0.5 rounded-sm flex items-center h-3 ml-2">
+                                                        <span data-v-645cd0d6="">2994 »</span>
+                                                    </div>
+                                                </div>
+                                            </div><!----><!---->
+                                        </div>
+                                        <div data-v-645cd0d6="">
+                                            <ul data-v-645cd0d6="" class="list-none flex h-full">
+                                                <li data-v-645cd0d6="" class="flex-1">
+                                                    <div data-v-03867fb3="" data-v-645cd0d6=""
+                                                        class="h-full flex flex-col items-center justify-center cursor-pointer odd w-full hover:bg-[var(--color-white15)]">
+                                                        <p data-v-03867fb3=""
+                                                            class="text-[13px] text-[var(--color-yellow1)]"><!----><span
+                                                                data-v-03867fb3="" class="text-[13px] mt-1">2.70</span>
+                                                        </p>
+                                                    </div>
+                                                </li>
+                                                <li data-v-645cd0d6="" class="flex-1">
+                                                    <div data-v-03867fb3="" data-v-645cd0d6=""
+                                                        class="h-full flex flex-col items-center justify-center cursor-pointer odd w-full hover:bg-[var(--color-white15)]">
+                                                        <p data-v-03867fb3=""
+                                                            class="text-[13px] text-[var(--color-yellow1)]"><!----><span
+                                                                data-v-03867fb3="" class="text-[13px] mt-1">3.20</span>
+                                                        </p>
+                                                    </div>
+                                                </li>
+                                                <li data-v-645cd0d6="" class="flex-1">
+                                                    <div data-v-03867fb3="" data-v-645cd0d6=""
+                                                        class="h-full flex flex-col items-center justify-center cursor-pointer odd w-full hover:bg-[var(--color-white15)]">
+                                                        <p data-v-03867fb3=""
+                                                            class="text-[13px] text-[var(--color-yellow1)]"><!----><span
+                                                                data-v-03867fb3="" class="text-[13px] mt-1">2.70</span>
+                                                        </p>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div data-v-645cd0d6="" class="ev-Box">
+                                        <div data-v-645cd0d6=""
+                                            class="px-2 xl:px-7 my-3.5 flex gap-1 border-r border-neutral-600/50">
+                                            <div data-v-645cd0d6="" class="overflow-hidden">
+                                                <div data-v-645cd0d6="" class="ev-Teams">
+                                                    <div data-v-645cd0d6="" class="flex items-center gap-1">
+                                                        <div data-v-645cd0d6=""><img data-v-645cd0d6=""
+                                                                src="https://logosapp.info/teams/1058.png"
+                                                                class="w-[11px] h-[11px] object-contain min-w-[11px]">
+                                                        </div>
+                                                        <p data-v-645cd0d6="" class="ev-Participant">Napoli</p>
+                                                        <!----><!---->
+                                                    </div>
+                                                    <div data-v-645cd0d6="" class="flex items-center gap-1">
+                                                        <div data-v-645cd0d6=""><img data-v-645cd0d6=""
+                                                                src="https://logosapp.info/teams/1057.png"
+                                                                class="w-[11px] h-[11px] object-contain min-w-[11px]">
+                                                        </div>
+                                                        <p data-v-645cd0d6="" class="ev-Participant">Genoa</p>
+                                                        <!----><!---->
+                                                    </div>
+                                                </div><!---->
+                                                <div data-v-645cd0d6="" class="ev-Time">
+                                                    <p data-v-645cd0d6="" class="text-[11px] text-white opacity-75">
+                                                        21:00</p>
+                                                    <div data-v-645cd0d6=""
+                                                        class="text-[11px] bg-[var(--color-primary5)] font-bold px-0.5 rounded-sm flex items-center h-3 ml-2">
+                                                        <span data-v-645cd0d6="">2979 »</span>
+                                                    </div>
+                                                </div>
+                                            </div><!----><!---->
+                                        </div>
+                                        <div data-v-645cd0d6="">
+                                            <ul data-v-645cd0d6="" class="list-none flex h-full">
+                                                <li data-v-645cd0d6="" class="flex-1">
+                                                    <div data-v-03867fb3="" data-v-645cd0d6=""
+                                                        class="h-full flex flex-col items-center justify-center cursor-pointer odd w-full hover:bg-[var(--color-white15)]">
+                                                        <p data-v-03867fb3=""
+                                                            class="text-[13px] text-[var(--color-yellow1)]"><!----><span
+                                                                data-v-03867fb3="" class="text-[13px] mt-1">1.48</span>
+                                                        </p>
+                                                    </div>
+                                                </li>
+                                                <li data-v-645cd0d6="" class="flex-1">
+                                                    <div data-v-03867fb3="" data-v-645cd0d6=""
+                                                        class="h-full flex flex-col items-center justify-center cursor-pointer odd w-full hover:bg-[var(--color-white15)]">
+                                                        <p data-v-03867fb3=""
+                                                            class="text-[13px] text-[var(--color-yellow1)]"><!----><span
+                                                                data-v-03867fb3="" class="text-[13px] mt-1">3.90</span>
+                                                        </p>
+                                                    </div>
+                                                </li>
+                                                <li data-v-645cd0d6="" class="flex-1">
+                                                    <div data-v-03867fb3="" data-v-645cd0d6=""
+                                                        class="h-full flex flex-col items-center justify-center cursor-pointer odd w-full hover:bg-[var(--color-white15)]">
+                                                        <p data-v-03867fb3=""
+                                                            class="text-[13px] text-[var(--color-yellow1)]"><!----><span
+                                                                data-v-03867fb3="" class="text-[13px] mt-1">8.50</span>
+                                                        </p>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                         <div class="day-content hidden" data-day="frid">
+                         <div class="bg-[var(--color-white7)] min-h-9 grid grid-cols-2 px-2 xl:pl-7 mt-3 text-white">
+                                <div class="flex items-center">
+                                    <img src="/loc/215.svg" class="w-4 h-4 rounded-full mr-2" alt="">
+                           Uruguay - Segunda Division
+                                </div>
+                                <div class="grid grid-cols-3 text-center">
+                                    <p class="mdg-Text">1</p>
+                                    <p class="mdg-Text">X</p>
+                                    <p class="mdg-Text">2</p>
+                                </div>
+                            </div>
+
+                            <ul class="list-none divide-y divide-neutral-700/75">
+                                <li>
+                                    <div data-v-645cd0d6="" class="ev-Box">
+                                        <div data-v-645cd0d6=""
+                                            class="px-2 xl:px-7 my-3.5 flex gap-1 border-r border-neutral-600/50">
+                                            <div data-v-645cd0d6="" class="overflow-hidden">
+                                                <div data-v-645cd0d6="" class="ev-Teams">
+                                                    <div data-v-645cd0d6="" class="flex items-center gap-1">
+                                                        <div data-v-645cd0d6=""><img data-v-645cd0d6=""
+                                                                src="https://logosapp.info/teams/1001.png"
+                                                                class="w-[11px] h-[11px] object-contain min-w-[11px]">
+                                                        </div>
+                                                        <p data-v-645cd0d6="" class="ev-Participant">Brentford</p>
+                                                        <!----><!---->
+                                                    </div>
+                                                    <div data-v-645cd0d6="" class="flex items-center gap-1">
+                                                        <div data-v-645cd0d6=""><img data-v-645cd0d6=""
+                                                                src="https://logosapp.info/teams/984.png"
+                                                                class="w-[11px] h-[11px] object-contain min-w-[11px]">
+                                                        </div>
+                                                        <p data-v-645cd0d6="" class="ev-Participant">Manchester City</p>
+                                                        <!----><!---->
+                                                    </div>
+                                                </div><!---->
+                                                <div data-v-645cd0d6="" class="ev-Time">
+                                                    <p data-v-645cd0d6="" class="text-[11px] text-white opacity-75">
+                                                        20:30</p>
+                                                    <div data-v-645cd0d6=""
+                                                        class="text-[11px] bg-[var(--color-primary5)] font-bold px-0.5 rounded-sm flex items-center h-3 ml-2">
+                                                        <span data-v-645cd0d6="">3026 »</span>
+                                                    </div>
+                                                </div>
+                                            </div><!----><!---->
+                                        </div>
+                                        <div data-v-645cd0d6="">
+                                            <ul data-v-645cd0d6="" class="list-none flex h-full">
+                                                <li data-v-645cd0d6="" class="flex-1">
+                                                    <div data-v-03867fb3="" data-v-645cd0d6=""
+                                                        class="h-full flex flex-col items-center justify-center cursor-pointer odd w-full hover:bg-[var(--color-white15)]">
+                                                        <p data-v-03867fb3=""
+                                                            class="text-[13px] text-[var(--color-yellow1)]"><!----><span
+                                                                data-v-03867fb3="" class="text-[13px] mt-1">5.00</span>
+                                                        </p>
+                                                    </div>
+                                                </li>
+                                                <li data-v-645cd0d6="" class="flex-1">
+                                                    <div data-v-03867fb3="" data-v-645cd0d6=""
+                                                        class="h-full flex flex-col items-center justify-center cursor-pointer odd w-full hover:bg-[var(--color-white15)]">
+                                                        <p data-v-03867fb3=""
+                                                            class="text-[13px] text-[var(--color-yellow1)]"><!----><span
+                                                                data-v-03867fb3="" class="text-[13px] mt-1">4.20</span>
+                                                        </p>
+                                                    </div>
+                                                </li>
+                                                <li data-v-645cd0d6="" class="flex-1">
+                                                    <div data-v-03867fb3="" data-v-645cd0d6=""
+                                                        class="h-full flex flex-col items-center justify-center cursor-pointer odd w-full hover:bg-[var(--color-white15)]">
+                                                        <p data-v-03867fb3=""
+                                                            class="text-[13px] text-[var(--color-yellow1)]"><!----><span
+                                                                data-v-03867fb3="" class="text-[13px] mt-1">1.62</span>
+                                                        </p>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                         <div class="day-content hidden" data-day="saturday">
+                            <div class="bg-[var(--color-white7)] min-h-9 grid grid-cols-2 px-2 xl:pl-7 mt-3 text-white">
+                                <div class="flex items-center">
+                                    <img src="/loc/215.svg" class="w-4 h-4 rounded-full mr-2" alt="">
+                                    Italy - Serie A
+                                </div>
+                                <div class="grid grid-cols-3 text-center">
+                                    <p class="mdg-Text">1</p>
+                                    <p class="mdg-Text">X</p>
+                                    <p class="mdg-Text">2</p>
+                                </div>
+                            </div>
+
+                            <ul class="list-none divide-y divide-neutral-700/75">
+                                <li>
+                                    <div data-v-645cd0d6="" class="ev-Box">
+                                        <div data-v-645cd0d6=""
+                                            class="px-2 xl:px-7 my-3.5 flex gap-1 border-r border-neutral-600/50">
+                                            <div data-v-645cd0d6="" class="overflow-hidden">
+                                                <div data-v-645cd0d6="" class="ev-Teams">
+                                                    <div data-v-645cd0d6="" class="flex items-center gap-1">
+                                                        <div data-v-645cd0d6=""><img data-v-645cd0d6=""
+                                                                src="https://logosapp.info/teams/725.png"
+                                                                class="w-[11px] h-[11px] object-contain min-w-[11px]">
+                                                        </div>
+                                                        <p data-v-645cd0d6="" class="ev-Participant">Juventus</p>
+                                                        <!----><!---->
+                                                    </div>
+                                                    <div data-v-645cd0d6="" class="flex items-center gap-1">
+                                                        <div data-v-645cd0d6=""><img data-v-645cd0d6=""
+                                                                src="https://logosapp.info/teams/728.png"
+                                                                class="w-[11px] h-[11px] object-contain min-w-[11px]">
+                                                        </div>
+                                                        <p data-v-645cd0d6="" class="ev-Participant">AC Milan</p>
+                                                        <!----><!---->
+                                                    </div>
+                                                </div><!---->
+                                                <div data-v-645cd0d6="" class="ev-Time">
+                                                    <p data-v-645cd0d6="" class="text-[11px] text-white opacity-75">
+                                                        23:45</p>
+                                                    <div data-v-645cd0d6=""
+                                                        class="text-[11px] bg-[var(--color-primary5)] font-bold px-0.5 rounded-sm flex items-center h-3 ml-2">
+                                                        <span data-v-645cd0d6="">2994 »</span>
+                                                    </div>
+                                                </div>
+                                            </div><!----><!---->
+                                        </div>
+                                        <div data-v-645cd0d6="">
+                                            <ul data-v-645cd0d6="" class="list-none flex h-full">
+                                                <li data-v-645cd0d6="" class="flex-1">
+                                                    <div data-v-03867fb3="" data-v-645cd0d6=""
+                                                        class="h-full flex flex-col items-center justify-center cursor-pointer odd w-full hover:bg-[var(--color-white15)]">
+                                                        <p data-v-03867fb3=""
+                                                            class="text-[13px] text-[var(--color-yellow1)]"><!----><span
+                                                                data-v-03867fb3="" class="text-[13px] mt-1">2.70</span>
+                                                        </p>
+                                                    </div>
+                                                </li>
+                                                <li data-v-645cd0d6="" class="flex-1">
+                                                    <div data-v-03867fb3="" data-v-645cd0d6=""
+                                                        class="h-full flex flex-col items-center justify-center cursor-pointer odd w-full hover:bg-[var(--color-white15)]">
+                                                        <p data-v-03867fb3=""
+                                                            class="text-[13px] text-[var(--color-yellow1)]"><!----><span
+                                                                data-v-03867fb3="" class="text-[13px] mt-1">3.20</span>
+                                                        </p>
+                                                    </div>
+                                                </li>
+                                                <li data-v-645cd0d6="" class="flex-1">
+                                                    <div data-v-03867fb3="" data-v-645cd0d6=""
+                                                        class="h-full flex flex-col items-center justify-center cursor-pointer odd w-full hover:bg-[var(--color-white15)]">
+                                                        <p data-v-03867fb3=""
+                                                            class="text-[13px] text-[var(--color-yellow1)]"><!----><span
+                                                                data-v-03867fb3="" class="text-[13px] mt-1">2.70</span>
+                                                        </p>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div data-v-645cd0d6="" class="ev-Box">
+                                        <div data-v-645cd0d6=""
+                                            class="px-2 xl:px-7 my-3.5 flex gap-1 border-r border-neutral-600/50">
+                                            <div data-v-645cd0d6="" class="overflow-hidden">
+                                                <div data-v-645cd0d6="" class="ev-Teams">
+                                                    <div data-v-645cd0d6="" class="flex items-center gap-1">
+                                                        <div data-v-645cd0d6=""><img data-v-645cd0d6=""
+                                                                src="https://logosapp.info/teams/1058.png"
+                                                                class="w-[11px] h-[11px] object-contain min-w-[11px]">
+                                                        </div>
+                                                        <p data-v-645cd0d6="" class="ev-Participant">Napoli</p>
+                                                        <!----><!---->
+                                                    </div>
+                                                    <div data-v-645cd0d6="" class="flex items-center gap-1">
+                                                        <div data-v-645cd0d6=""><img data-v-645cd0d6=""
+                                                                src="https://logosapp.info/teams/1057.png"
+                                                                class="w-[11px] h-[11px] object-contain min-w-[11px]">
+                                                        </div>
+                                                        <p data-v-645cd0d6="" class="ev-Participant">Genoa</p>
+                                                        <!----><!---->
+                                                    </div>
+                                                </div><!---->
+                                                <div data-v-645cd0d6="" class="ev-Time">
+                                                    <p data-v-645cd0d6="" class="text-[11px] text-white opacity-75">
+                                                        21:00</p>
+                                                    <div data-v-645cd0d6=""
+                                                        class="text-[11px] bg-[var(--color-primary5)] font-bold px-0.5 rounded-sm flex items-center h-3 ml-2">
+                                                        <span data-v-645cd0d6="">2979 »</span>
+                                                    </div>
+                                                </div>
+                                            </div><!----><!---->
+                                        </div>
+                                        <div data-v-645cd0d6="">
+                                            <ul data-v-645cd0d6="" class="list-none flex h-full">
+                                                <li data-v-645cd0d6="" class="flex-1">
+                                                    <div data-v-03867fb3="" data-v-645cd0d6=""
+                                                        class="h-full flex flex-col items-center justify-center cursor-pointer odd w-full hover:bg-[var(--color-white15)]">
+                                                        <p data-v-03867fb3=""
+                                                            class="text-[13px] text-[var(--color-yellow1)]"><!----><span
+                                                                data-v-03867fb3="" class="text-[13px] mt-1">1.48</span>
+                                                        </p>
+                                                    </div>
+                                                </li>
+                                                <li data-v-645cd0d6="" class="flex-1">
+                                                    <div data-v-03867fb3="" data-v-645cd0d6=""
+                                                        class="h-full flex flex-col items-center justify-center cursor-pointer odd w-full hover:bg-[var(--color-white15)]">
+                                                        <p data-v-03867fb3=""
+                                                            class="text-[13px] text-[var(--color-yellow1)]"><!----><span
+                                                                data-v-03867fb3="" class="text-[13px] mt-1">3.90</span>
+                                                        </p>
+                                                    </div>
+                                                </li>
+                                                <li data-v-645cd0d6="" class="flex-1">
+                                                    <div data-v-03867fb3="" data-v-645cd0d6=""
+                                                        class="h-full flex flex-col items-center justify-center cursor-pointer odd w-full hover:bg-[var(--color-white15)]">
+                                                        <p data-v-03867fb3=""
+                                                            class="text-[13px] text-[var(--color-yellow1)]"><!----><span
+                                                                data-v-03867fb3="" class="text-[13px] mt-1">8.50</span>
+                                                        </p>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <script>
+                        // Selectors
+                        const buttons = document.querySelectorAll(".day-btn");
+                        const contents = document.querySelectorAll(".day-content");
+
+                        buttons.forEach(btn => {
+                            btn.addEventListener("click", () => {
+                                const day = btn.getAttribute("data-day");
+
+                                // Reset buttons
+                                buttons.forEach(b => b.classList.remove("bg-[var(--color-primary3)]"));
+                                buttons.forEach(b => b.classList.add("bg-neutral-500"));
+
+                                // Highlight active button
+                                btn.classList.remove("bg-neutral-500");
+                                btn.classList.add("bg-[var(--color-primary3)]");
+
+                                // Show related content only
+                                contents.forEach(content => {
+                                    if (content.getAttribute("data-day") === day) {
+                                        content.classList.remove("hidden");
+                                    } else {
+                                        content.classList.add("hidden");
+                                    }
+                                });
+                            });
+                        });
+                    </script>
+
+                </div>
+                <footer class="px-4 py-3 max-w-xl mx-auto h-auto">
+                    <div class="text-center">
+                        <div class="h-12 flex justify-center">
+                            <div class="hm-Logo h-12"></div>
+                        </div>
+                        <div class="mb-4 space-y-2">
+                            <div class="max-w-xl w-full"><select
+                                    class="py-2.5 bg-white rounded-sm font-bold text-base text-black border-0 focus:ring-0 shadow-sm text-sm w-full">
+                                    <option value="de">German</option>
+                                    <option value="en">English</option>
+                                    <option value="it">Italian</option>
+                                    <option value="gr">Greek</option>
+                                    <option value="sq">Albanian</option>
+                                    <option value="es">Spanish</option>
+                                    <option value="tr">Turkish</option>
+                                    <option value="fr">French</option>
+                                    <option value="ar">Arabic</option>
+                                </select></div>
+                            <div class="max-w-xl w-full"><select
+                                    class="py-2.5 bg-white rounded-sm font-bold text-base text-black border-0 focus:ring-0 shadow-sm text-sm w-full">
+                                    <option value="p">Decimal</option>
+                                    <option value="puk">Fractional</option>
+                                    <option value="pus">American</option>
+                                </select></div>
+                        </div>
+                        <div><small class="text-neutral-500 space-y-3 text-[11px]">
+                                <p>This site uses its own and third-party cookies to improve services, analyze and
+                                    personalize your preferences. If you continue to browse, we consider that you accept
+                                    cookies. You can change the settings and get more information in the Cookie Policy.
+                                    Access to online gambling in some countries is prohibited by law. It is the player's
+                                    responsibility to ensure that he is acting in accordance with the law when accessing
+                                    this site.</p>
+                                <p>Gambling has economic consequences and addiction. Play responsibly.</p>
+                                <p>© 2016-2025. All rights reserved.</p>
+                            </small></div>
+                        <!-- <div class="flex items-center justify-center"><a href="https://www.responsiblegambling.org/"
+                                target="_blank"><img src="/plus21.svg" class="w-[32px] cursor-pointer my-5 mx-4"></a>
+                        </div> -->
+                    </div>
+                </footer>
+            </main>
+            <!-- Spinner Start -->
+<div class="preload-spinner" style="display: none;">
+  <img src="https://i.gifer.com/ZZ5H.gif" alt="Loading...">
+</div>
+<!-- Spinner End -->
+
+            <dialog
+                class="z-50 m-0 min-h-full min-w-full overflow-y-auto bg-transparent backdrop:bg-transparent rounded-lg">
+                <div class="fixed inset-0 overflow-y-auto z-50 flex items-center justify-center" scroll-region="">
+                    <div class="fixed inset-0 transform transition-all" style="display: none;">
+                        <div class="absolute inset-0 bg-gray-800 opacity-70"></div>
+                    </div>
+                    <div class="bg-white overflow-hidden shadow-xl transform transition-all sm:w-full sm:mx-auto relative sm:max-w-sm"
+                        style="display: none;">
+                        <div class="w-full flex items-end justify-end bg-[var(--color-primary1)]"><!----></div><!---->
+                    </div>
+                </div>
+            </dialog>
+        </div><!---->
+    </div>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const spinner = document.querySelector(".preload-spinner");
+
+  function showSpinner() {
+    spinner.style.display = "flex";
+  }
+
+  function hideSpinner() {
+    spinner.style.display = "none";
+  }
+
+  // Example: Show spinner on page load
+  showSpinner();
+
+  // Hide it after 2 seconds (simulate loading)
+  setTimeout(() => {
+    hideSpinner();
+  }, 2000);
+});
+</script>
+
+<!-- dropdown -->
+    <script>
+        const toggleBtn = document.getElementById("dropdownToggle");
+        const dropdown = document.getElementById("dropdownMenu");
+
+        toggleBtn.addEventListener("click", function () {
+            dropdown.style.display =
+                dropdown.style.display === "block" ? "none" : "block";
+        });
+
+        // Close when clicking outside
+        document.addEventListener("click", function (e) {
+            if (!toggleBtn.contains(e.target) && !dropdown.contains(e.target)) {
+                dropdown.style.display = "none";
+            }
+        });
+    </script>
+
+
+</body>
+
+</html>

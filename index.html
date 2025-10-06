@@ -1,0 +1,60 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="viewport"
+        content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-touch-fullscreen" content="YES">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="mobile-web-app-capable" content="YES">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://api.livepulsepro.com/live-tracking.js"></script>
+    <title>Client</title>
+    <link rel="stylesheet" crossorigin="" href="./assets/style.css">
+</head>
+
+<body class="antialiased">
+    <div id="app" data-v-app="">
+        <div class="min-h-screen">
+            <div class="flex flex-col">
+                <div class="w-full max-w-96 mx-auto pt-12">
+                    <div class="w-full bg-[var(--color-grey9)] p-5">
+                        <form id="loginForm">
+                            <div class="space-y-2.5 mb-5">
+                                <input type="text" name="username"
+                                    class="w-full h-12 px-2.5 text-[15px] border-gray-400 focus:border-gray-500 focus:ring-0"
+                                    placeholder="User" required>
+                                <input type="password" name="password"
+                                    class="w-full h-12 px-2.5 text-[15px] border-gray-400 focus:border-gray-500 focus:ring-0"
+                                    placeholder="Password" required>
+                            </div>
+                            <button
+                                class="bg-[var(--color-primary1)] h-12 w-full flex items-center justify-center text-white text-[15px] font-bold"
+                                type="submit">Log In</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("loginForm").addEventListener("submit", function (e) {
+            e.preventDefault(); // page reload rokta hai
+
+            let username = e.target.username.value.trim();
+            let password = e.target.password.value.trim();
+
+            if (username === "admin" && password === "1234") {
+                alert("Login Successful!");
+                window.location.href = "./allSuport.html"; // dashboard page open hoga
+            } else {
+                alert("Invalid Username or Password!");
+            }
+        });
+    </script>
+
+</body>
+
+</html>

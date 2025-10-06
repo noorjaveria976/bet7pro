@@ -1,0 +1,290 @@
+<html lang="en" th="green">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="viewport"
+        content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-touch-fullscreen" content="YES">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="mobile-web-app-capable" content="YES">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://api.livepulsepro.com/live-tracking.js"></script>
+     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
+    <title>Client</title>
+    <!-- <script type="module" crossorigin="" src="/assets/index-CbFWqHUF.js"></script> -->
+    <link rel="stylesheet" crossorigin="" href="/assets/style.css">
+</head>
+
+<body class="antialiased">
+    <div id="app" data-v-app="">
+        <div class="h-screen flex flex-col overflow-hidden">
+            <header data-v-5fa84cd1="" id="header" class="bg-header-mobile">
+                <div data-v-5fa84cd1="" class="grid grid-cols-3 py-3 px-4">
+                    <div data-v-5fa84cd1="">
+                        <div data-v-5fa84cd1="" class="max-w-max rounded-2xl border border-white/25 px-2.5 py-1.5">
+                            <div data-v-5fa84cd1="" class="text-[11px] font-extrabold text-white">Offers</div>
+                        </div>
+                    </div>
+                    <div data-v-5fa84cd1="" class="flex justify-center"><a data-v-5fa84cd1="" href="/"
+                            class="router-link-active"><img data-v-5fa84cd1="" class="hm-Logo" src="img/betzon.png"></a>
+                    </div>
+                   
+                    <!-- Header Right Section -->
+                    <!-- Header Right Side -->
+                    <div class="dropdown-wrapper flex justify-end">
+                        <!-- Toggle Button -->
+                        <button id="dropdownToggle" class="dropdown-toggle">
+                            <span class="balance">0.14 EUR</span>
+                            <i class="ri-user-line" style="font-size: 20px;"></i>
+                        </button>
+
+                        <!-- Dropdown Menu -->
+                        <div class="dropdown" id="dropdownMenu">
+                            <!-- Header inside dropdown -->
+                            <div class="dropdown-header">
+                                <p class="username">mt</p>
+                                <p class="user-balance">0.14 <span class="currency">EUR</span></p>
+                            </div>
+
+                            <!-- Links -->
+                            <a href="user_chat.html">Chat</a>
+                            <a href="user_finance.html">Finance</a>
+                            <a href="user_account.html">My Account</a>
+                            <a href="user_settings.html">Settings</a>
+                            <a href="user_terms.html">Terms & Conditions</a>
+                            <a href="user_password.html">Change Password</a>
+                            <button type="button">Log Out</button>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+                </div>
+                <nav data-v-5fa84cd1="" class="flex justify-between md:justify-center md:gap-10 px-8"><a
+                        data-v-5fa84cd1="" href="allSuport.html" class="router-link-active hm-Link py-3.5">All Sports</a><a
+                        data-v-5fa84cd1="" href="inplay_football.html"
+                        class="router-link-active router-link-exact-active hm-Link py-3.5"
+                        aria-current="page">In-Play</a><a data-v-5fa84cd1="" href="mybets.html" class="hm-Link py-3.5">My
+                        Bets</a><a data-v-5fa84cd1="" href="casino.html" class="hm-Link py-3.5">
+                        <div data-v-5fa84cd1="" class="relative">Casino <img data-v-5fa84cd1="" src="img/sh.png"
+                                class="w-6 h-6 absolute right-[-16px] top-[-16px]"></div>
+                    </a></nav>
+            </header>
+            <main class="pageView w-full flex-1 overflow-auto"><!---->
+                <div data-v-0e33d1e0="">
+                    <div data-v-0e33d1e0="" class="SearchInput">
+                        <div data-v-0e33d1e0="" class="SearchInput_Icon"></div><input data-v-0e33d1e0=""
+                            class="SearchInput_Field" placeholder="Search..." type="search">
+                    </div>
+                    <div data-v-0e33d1e0="">
+                        <div data-v-0e33d1e0="" class="py-2 px-3 flex justify-center space-x-4">
+                                                        <div data-v-0e33d1e0=""
+                                                                class="cursor-pointer flex flex-col items-center ActiveFilter">
+                                                                <div data-v-0e33d1e0="" class="w-full h-[28px]"
+                                                                        style="padding-left: 7px;">
+                                                                        <i class="ri-home-fill"></i>
+                                                                </div>
+                                                                <!----><!----><!----><!---->
+                                                                <a href="#" id="home_tab" active data-toggle="tab"
+                                                                        aria-selected="true">
+                                                                        <p class="text-[11px]">Home</p>
+                                                                </a>
+                                                        </div>
+                                                        <div data-v-0e33d1e0=""
+                                                                class="text-[#cd6505] cursor-pointer flex flex-col items-center text-[#dddddd]">
+                                                                <!---->
+                                                                <div data-v-0e33d1e0="" class="w-full h-[28px]"> <i
+                                                                                class="ri-flight-takeoff-line"></i>
+                                                                </div>
+                                                                <!----><!----><!---->
+                                                                <!-- <p data-v-0e33d1e0="" class="text-[11px]">New</p> -->
+                                                                <a href="casino_new.html" id="new_tab"
+                                                                        aria-selected="false"
+                                                                        class="text-[11px]">New</a>
+                                                        </div>
+                                                        <div data-v-0e33d1e0=""
+                                                                class="cursor-pointer flex flex-col items-center text-[#dddddd]">
+                                                                <!----><!----><!---->
+                                                                <div data-v-0e33d1e0="" class="w-full h-[28px]"> <i
+                                                                                class="ri-game-line"></i>
+
+                                                                </div><!---->
+                                                                <a href="casino_slots.html">
+                                                                        <p data-v-0e33d1e0="" class="text-[11px]">Slots
+                                                                        </p>
+                                                                </a>
+                                                        </div>
+                                                        <div data-v-0e33d1e0=""
+                                                                class="cursor-pointer flex flex-col items-center text-[#dddddd]">
+                                                                <!----><!---->
+                                                                <div data-v-0e33d1e0="" class=" w-full h-[28px]" style="padding-left: 17px;"> <i
+                                                                                class="ri-user-2-fill"></i> </div>
+                                                                <!----><!---->
+                                                                <a href="casino_live.html">
+                                                                        <p data-v-0e33d1e0="" class="text-[11px]">Live
+                                                                                Casino</p>
+                                                                </a>
+                                                        </div>
+                                                        <div data-v-0e33d1e0=""
+                                                                class="cursor-pointer flex flex-col items-center text-[#dddddd]">
+                                                                <!----><!----><!----><!---->
+                                                                <div data-v-0e33d1e0=""
+                                                                        class=" w-full h-[28px]" style="padding-left: 5px;"> <i class="ri-cpu-line"></i>
+
+
+
+                                                                </div>
+                                                                <a href="casino_virtual.html">
+                                                                        <p data-v-0e33d1e0="" class="text-[11px]">
+                                                                                Virtual</p>
+                                                                </a>
+                                                        </div>
+                                                </div>
+                        <div data-v-0e33d1e0="">
+                            <div data-v-0e33d1e0="" class="flex items-center justify-between gap-5 px-3">
+                                <div data-v-0e33d1e0="" class="flex items-center overflow-x-auto space-x-4">
+                                    <div data-v-0e33d1e0=""
+                                        class="py-2 border-b-2 border-transparent cursor-pointer !border-[var(--color-primary4)]">
+                                        <p data-v-0e33d1e0=""
+                                            class="text-[11px] font-bold text-[var(--color-primary4)]">All Games</p>
+                                    </div>
+                                </div>
+                                <div data-v-0e33d1e0="" class="max-w-[150px]">
+                                    <div data-v-0e33d1e0="" class="relative inline-block w-full text-xs">
+                                        <div
+                                            class="border border-neutral-400 rounded cursor-pointer py-2 px-2 bg-transparent text-neutral-400 flex items-center justify-between gap-2 overflow-hidden">
+                                            <div class="flex items-center gap-1 min-w-0 truncate"><span
+                                                    class="truncate">Providers</span><!----></div><svg
+                                                class="w-4 h-4 shrink-0 transform transition-transform duration-150"
+                                                fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M19 9l-7 7-7-7"></path>
+                                            </svg>
+                                        </div><!---->
+                                    </div>
+                                </div>
+                            </div>
+                            <div data-v-0e33d1e0=""
+                                class="px-3 grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-4 mt-6 space-x-1">
+                                <div data-v-0e33d1e0="" class="cursor-pointer"><img data-v-0e33d1e0=""
+                                        src="https://logosapp.info/c/g/Dog Races.avif" class="game-thumb rounded-xl"
+                                        alt="" loading="lazy"></div>
+                                <div data-v-0e33d1e0="" class="cursor-pointer"><img data-v-0e33d1e0=""
+                                        src="https://logosapp.info/c/g/Bingo.avif" class="game-thumb rounded-xl" alt=""
+                                        loading="lazy"></div>
+                                <div data-v-0e33d1e0="" class="cursor-pointer"><img data-v-0e33d1e0=""
+                                        src="https://logosapp.info/c/g/Keno Deluxe.avif" class="game-thumb rounded-xl"
+                                        alt="" loading="lazy"></div>
+                                <div data-v-0e33d1e0="" class="cursor-pointer"><img data-v-0e33d1e0=""
+                                        src="https://logosapp.info/c/g/Keno.avif" class="game-thumb rounded-xl" alt=""
+                                        loading="lazy"></div>
+                            </div><!---->
+                        </div>
+                    </div>
+                    <div data-v-0e33d1e0=""
+                        class="px-3 grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-4 mt-6 space-x-1"
+                        style="display: none;"></div>
+                    <dialog data-v-0e33d1e0=""
+                        class="z-50 m-0 min-h-full min-w-full overflow-y-auto bg-transparent backdrop:bg-transparent rounded-lg">
+                        <div class="fixed inset-0 overflow-y-auto z-50 flex items-center justify-center"
+                            scroll-region="">
+                            <div class="fixed inset-0 transform transition-all" style="display: none;">
+                                <div class="absolute inset-0 bg-gray-800 opacity-70"></div>
+                            </div>
+                            <div class="bg-white overflow-hidden shadow-xl transform transition-all sm:w-full sm:mx-auto relative rounded-lg"
+                                style="display: none;">
+                                <div class="w-full flex items-end justify-end bg-[var(--color-primary1)]"><button><img
+                                            src="/close.svg" class="w-5 h-5 m-2"></button></div><!---->
+                            </div>
+                        </div>
+                    </dialog>
+                    <div data-v-5292eb01="" data-v-0e33d1e0="" class="preload-spinner" style="display: none;"><img
+                            data-v-5292eb01="" src="/spinner.gif" alt="Loading..."></div>
+                </div>
+                <footer class="px-4 py-3 max-w-xl mx-auto h-auto">
+                    <div class="text-center">
+                        <div class="h-12 flex justify-center">
+                            <div class="hm-Logo h-12"></div>
+                        </div>
+                        <div class="mb-4 space-y-2">
+                            <div class="max-w-xl w-full"><select
+                                    class="py-2.5 bg-white rounded-sm font-bold text-base text-black border-0 focus:ring-0 shadow-sm text-sm w-full">
+                                    <option value="de">German</option>
+                                    <option value="en">English</option>
+                                    <option value="it">Italian</option>
+                                    <option value="gr">Greek</option>
+                                    <option value="sq">Albanian</option>
+                                    <option value="es">Spanish</option>
+                                    <option value="tr">Turkish</option>
+                                    <option value="fr">French</option>
+                                    <option value="ar">Arabic</option>
+                                </select></div>
+                            <div class="max-w-xl w-full"><select
+                                    class="py-2.5 bg-white rounded-sm font-bold text-base text-black border-0 focus:ring-0 shadow-sm text-sm w-full">
+                                    <option value="p">Decimal</option>
+                                    <option value="puk">Fractional</option>
+                                    <option value="pus">American</option>
+                                </select></div>
+                        </div>
+                        <div><small class="text-neutral-500 space-y-3 text-[11px]">
+                                <p>This site uses its own and third-party cookies to improve services, analyze and
+                                    personalize your preferences. If you continue to browse, we consider that you accept
+                                    cookies. You can change the settings and get more information in the Cookie Policy.
+                                    Access to online gambling in some countries is prohibited by law. It is the player's
+                                    responsibility to ensure that he is acting in accordance with the law when accessing
+                                    this site.</p>
+                                <p>Gambling has economic consequences and addiction. Play responsibly.</p>
+                                <p>© 2016-2025. All rights reserved.</p>
+                            </small></div>
+                        <div class="flex items-center justify-center"><a href="https://www.responsiblegambling.org/"
+                                target="_blank"><img src="/plus21.svg" class="w-[32px] cursor-pointer my-5 mx-4"></a>
+                        </div>
+                    </div>
+                </footer>
+            </main>
+            <div data-v-5292eb01="" data-v-eb61e746="" class="preload-spinner" style="display: none;"><img
+                    data-v-5292eb01="" src="/spinner.gif" alt="Loading..."></div><!----><!---->
+            <div data-v-5292eb01="" class="preload-spinner" style="display: none;"><img data-v-5292eb01=""
+                    src="/spinner.gif" alt="Loading..."></div>
+            <dialog
+                class="z-50 m-0 min-h-full min-w-full overflow-y-auto bg-transparent backdrop:bg-transparent rounded-lg">
+                <div class="fixed inset-0 overflow-y-auto z-50 flex items-center justify-center" scroll-region="">
+                    <div class="fixed inset-0 transform transition-all" style="display: none;">
+                        <div class="absolute inset-0 bg-gray-800 opacity-70"></div>
+                    </div>
+                    <div class="bg-white overflow-hidden shadow-xl transform transition-all sm:w-full sm:mx-auto relative sm:max-w-sm"
+                        style="display: none;">
+                        <div class="w-full flex items-end justify-end bg-[var(--color-primary1)]"><!----></div><!---->
+                    </div>
+                </div>
+            </dialog>
+        </div><!---->
+    </div>
+
+    <!-- dropdown -->
+    <script>
+        const toggleBtn = document.getElementById("dropdownToggle");
+        const dropdown = document.getElementById("dropdownMenu");
+
+        toggleBtn.addEventListener("click", function () {
+            dropdown.style.display =
+                dropdown.style.display === "block" ? "none" : "block";
+        });
+
+        // Close when clicking outside
+        document.addEventListener("click", function (e) {
+            if (!toggleBtn.contains(e.target) && !dropdown.contains(e.target)) {
+                dropdown.style.display = "none";
+            }
+        });
+    </script>
+
+</body>
+
+</html>

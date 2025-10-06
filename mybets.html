@@ -1,0 +1,406 @@
+<html lang="en" th="green">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="viewport"
+        content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-touch-fullscreen" content="YES">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="mobile-web-app-capable" content="YES">
+
+    <title>Client</title>
+
+    <link rel="stylesheet" crossorigin="" href="./assets/style.css">
+    <!-- Font Awesome CDN -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet">
+
+</head>
+
+<body class="antialiased">
+    <div id="app" data-v-app="">
+        <div class="h-screen flex flex-col overflow-hidden">
+            <header data-v-5fa84cd1="" id="header" class="bg-header-mobile">
+                <div data-v-5fa84cd1="" class="grid grid-cols-3 py-3 px-4">
+                    <div data-v-5fa84cd1="">
+                        <div data-v-5fa84cd1="" class="max-w-max rounded-2xl border border-white/25 px-2.5 py-1.5">
+                            <div data-v-5fa84cd1="" class="text-[11px] font-extrabold text-white">Offers</div>
+                        </div>
+                    </div>
+                    <div data-v-5fa84cd1="" class="flex justify-center"><a data-v-5fa84cd1="" href="/"
+                            class="router-link-active"><img data-v-5fa84cd1="" class="hm-Logo" src="img/betzon.png"></a>
+                    </div>
+
+                    <!-- Header Right Section -->
+                    <!-- Header Right Side -->
+                    <div class="dropdown-wrapper flex justify-end">
+                        <!-- Toggle Button -->
+                        <button id="dropdownToggle" class="dropdown-toggle">
+                            <span class="balance">0.14 EUR</span>
+                            <i class="ri-user-line" style="font-size: 20px;"></i>
+                        </button>
+
+                        <!-- Dropdown Menu -->
+                        <div class="dropdown" id="dropdownMenu">
+                            <!-- Header inside dropdown -->
+                            <div class="dropdown-header">
+                                <p class="username">mt</p>
+                                <p class="user-balance">0.14 <span class="currency">EUR</span></p>
+                            </div>
+
+                            <!-- Links -->
+                            <a href="user_chat.html">Chat</a>
+                            <a href="user_finance.html">Finance</a>
+                            <a href="user_account.html">My Account</a>
+                            <a href="user_settings.html">Settings</a>
+                            <a href="user_terms.html">Terms & Conditions</a>
+                            <a href="user_password.html">Change Password</a>
+                            <button type="button">Log Out</button>
+                        </div>
+                    </div>
+
+                </div>
+                <nav data-v-5fa84cd1="" class="flex justify-between md:justify-center md:gap-10 px-8"><a
+                        data-v-5fa84cd1="" href="allSuport.html" class="router-link-active hm-Link py-3.5">All
+                        Sports</a><a data-v-5fa84cd1="" href="inplay_football.html"
+                        class="router-link-active router-link-exact-active hm-Link py-3.5"
+                        aria-current="page">In-Play</a><a data-v-5fa84cd1="" href="mybets.html"
+                        class="hm-Link py-3.5">My
+                        Bets</a><a data-v-5fa84cd1="" href="casino.html" class="hm-Link py-3.5">
+                        <div data-v-5fa84cd1="" class="relative">Casino <img data-v-5fa84cd1="" src="img/sh.png"
+                                class="w-6 h-6 absolute right-[-16px] top-[-16px]"></div>
+                    </a></nav>
+            </header>
+            <main class="pageView w-full flex-1 overflow-auto"><!---->
+                <div>
+                    <form>
+                        <div class="px-4 py-2 flex flex-col md:flex-row md:gap-2"><input
+                                class="py-2.5 bg-white rounded-sm font-bold text-base text-black border-0 focus:ring-0 shadow-sm w-full rounded-b-none"
+                                type="date" placeholder="Start Date" value="2025-10-02"><input
+                                class="py-2.5 bg-white rounded-sm font-bold text-base text-black border-0 focus:ring-0 shadow-sm w-full border-t border-neutral-200 rounded-none"
+                                type="date" placeholder="End Date" value="2025-10-02"><select
+                                class="py-2.5 bg-white rounded-sm font-bold text-base text-black border-0 focus:ring-0 shadow-sm w-full rounded-t-none border-t border-neutral-200">
+                                <option value="67042a531db92cec0a22c64a">EUR</option>
+                            </select></div>
+                    </form>
+                    <div class="h-12 px-4 flex">
+                        <ul class="list-none flex items-center space-x-2">
+                            <li class="tab-item active"><span>All</span></li>
+                            <li class="tab-item"><span>Unconfirmed</span></li>
+                            <li class="tab-item"><span>Lost</span></li>
+                            <li class="tab-item"><span>Win</span></li>
+                        </ul>
+                    </div>
+
+
+                    <div class="px-4 py-2 space-y-4">
+                        <div class="no-Tickets">
+                            <p class="text-sm font-bold text-neutral-300 text-center">There are currently no bets to
+                                display</p>
+                        </div>
+                    </div>
+                </div>
+                <footer class="px-4 py-3 max-w-xl mx-auto h-auto">
+                    <div class="text-center">
+                        <div class="h-12 flex justify-center">
+                            <div class="hm-Logo h-12"></div>
+                        </div>
+                        <div class="mb-4 space-y-2">
+                            <div class="max-w-xl w-full"><select
+                                    class="py-2.5 bg-white rounded-sm font-bold text-base text-black border-0 focus:ring-0 shadow-sm text-sm w-full">
+                                    <option value="de">German</option>
+                                    <option value="en">English</option>
+                                    <option value="it">Italian</option>
+                                    <option value="gr">Greek</option>
+                                    <option value="sq">Albanian</option>
+                                    <option value="es">Spanish</option>
+                                    <option value="tr">Turkish</option>
+                                    <option value="fr">French</option>
+                                    <option value="ar">Arabic</option>
+                                </select></div>
+                            <div class="max-w-xl w-full"><select
+                                    class="py-2.5 bg-white rounded-sm font-bold text-base text-black border-0 focus:ring-0 shadow-sm text-sm w-full">
+                                    <option value="p">Decimal</option>
+                                    <option value="puk">Fractional</option>
+                                    <option value="pus">American</option>
+                                </select></div>
+                        </div>
+                        <div><small class="text-neutral-500 space-y-3 text-[11px]">
+                                <p>This site uses its own and third-party cookies to improve services, analyze and
+                                    personalize your preferences. If you continue to browse, we consider that you accept
+                                    cookies. You can change the settings and get more information in the Cookie Policy.
+                                    Access to online gambling in some countries is prohibited by law. It is the player's
+                                    responsibility to ensure that he is acting in accordance with the law when accessing
+                                    this site.</p>
+                                <p>Gambling has economic consequences and addiction. Play responsibly.</p>
+                                <p>© 2016-2025. All rights reserved.</p>
+                            </small></div>
+                        <!-- <div class="flex items-center justify-center"><a href="https://www.responsiblegambling.org/"
+                                target="_blank"><img src="" class="w-[32px] cursor-pointer my-5 mx-4"></a>
+                        </div> -->
+                    </div>
+                </footer>
+                <header data-v-5fa84cd1="" id="header" class="bg-header-mobile">
+                    <div data-v-5fa84cd1="" class="grid grid-cols-3 py-3 px-4">
+                        <div data-v-5fa84cd1="">
+                            <div data-v-5fa84cd1="" class="max-w-max rounded-2xl border border-white/25 px-2.5 py-1.5">
+                                <div data-v-5fa84cd1="" class="text-[11px] font-extrabold text-white">Offers</div>
+                            </div>
+                        </div>
+                        <div data-v-5fa84cd1="" class="flex justify-center"><a data-v-5fa84cd1="" href="/"
+                                class="router-link-active router-link-exact-active" aria-current="page"><img
+                                    data-v-5fa84cd1="" class="hm-Logo" src="https://logosapp.info/logo/betzon.png"></a>
+                        </div>
+                        <div data-v-5fa84cd1="" class="flex justify-end">
+                            <div data-v-f32f09a9="" data-v-5fa84cd1="" class="relative">
+                                <div><button data-v-f32f09a9=""
+                                        class="inline-flex flex-col-reverse xl:flex-row items-center">
+                                        <p data-v-f32f09a9="" class="text-[11px] text-white">128.69 EUR</p>
+                                        <div data-v-f32f09a9="" class="hm-MemberMenuIcon xl:ml-3"></div><!---->
+                                    </button></div>
+                                <div class="fixed inset-0 z-40" style="display: none;"></div>
+                                <div class="absolute z-50 mt-2 shadow-lg w-80 ltr:origin-top-right rtl:origin-top-left end-0"
+                                    style="display: none;">
+                                    <div class="ring-1 ring-black ring-opacity-5 overflow-hidden p-0 bg-[#f8f9fa]">
+                                        <div data-v-f32f09a9="" class="divide-y divide-neutral-200"><a
+                                                data-v-a5e71f13="" data-v-f32f09a9=""
+                                                href="/transactions/67042a531db92cec0a22c64a" class="drp-Item !py-1">
+                                                <div data-v-f32f09a9="">
+                                                    <p data-v-f32f09a9="" class="text-xs">mt</p>
+                                                    <p data-v-f32f09a9="" class="text-lg font-medium">128.69 <span
+                                                            data-v-f32f09a9=""
+                                                            class="text-xs text-neutral-600 font-normal">EUR</span></p>
+                                                </div>
+                                            </a><a data-v-a5e71f13="" data-v-f32f09a9="" href="/chat"
+                                                class="drp-Item">Chat <!----></a><a data-v-a5e71f13=""
+                                                data-v-f32f09a9="" href="/finance" class="drp-Item">Finance</a><!----><a
+                                                data-v-a5e71f13="" data-v-f32f09a9="" href="/my-account"
+                                                class="drp-Item">My Account</a><a data-v-a5e71f13="" data-v-f32f09a9=""
+                                                href="/settings" class="drp-Item">Settings</a><a data-v-a5e71f13=""
+                                                data-v-f32f09a9="" href="/terms" class="drp-Item">Terms &amp;
+                                                Conditions</a><a data-v-a5e71f13="" data-v-f32f09a9=""
+                                                href="/change-password" class="drp-Item">Change Password</a><button
+                                                data-v-a5e71f13="" data-v-f32f09a9="" type="submit" class="drp-Item">Log
+                                                Out</button></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+            </main>
+            <div data-v-5292eb01="" data-v-eb61e746="" class="preload-spinner" style="display: none;"><img
+                    data-v-5292eb01="" src="/spinner.gif" alt="Loading..."></div><!---->
+            <div data-v-eb61e746="" class="fixed bottom-0 left-0 right-0 pb-6">
+                <div data-v-eb61e746="" class="flex justify-center">
+                    <div data-v-eb61e746="" class="max-w-sm w-full rounded-xl overflow-hidden bg-white">
+                        <div data-v-eb61e746="" class="py-2 flex items-center justify-between">
+                            <div data-v-eb61e746="" class="flex-1 flex justify-between items-center px-2">
+                                <div data-v-eb61e746="" class="flex items-center">
+                                    <div data-v-eb61e746=""
+                                        class="w-5 h-5 bg-[var(--color-primary1)] flex items-center justify-center rounded-full text-sm text-white font-bold">
+                                        5</div>
+                                    <p data-v-eb61e746=""
+                                        class="text-[15px] font-extrabold text-[var(--color-grey4)] ml-2">Selections</p>
+                                </div><!---->
+                                <div data-v-eb61e746="" class="ml-auto text-sm font-medium">7.93 - 44.08</div>
+                            </div>
+                            <div data-v-eb61e746="" class="px-2 py-1.5 border-l">
+                                <div data-v-eb61e746="" class="bet-ShowHide"></div>
+                            </div>
+                        </div>
+                        <div data-v-eb61e746="" style="display: none;">
+                            <div data-v-eb61e746="" class="p-1.5">
+                                <div data-v-eb61e746="" class="bg-white rounded py-3 px-0.5">
+                                    <ul data-v-eb61e746="" class="space-y-4">
+                                        <li data-v-eb61e746="">
+                                            <div data-v-eb61e746="" class="flex-1 flex">
+                                                <div data-v-eb61e746="" class="px-2"><button data-v-eb61e746=""
+                                                        class="bs-XMark"></button></div>
+                                                <div data-v-eb61e746="" class="flex-1">
+                                                    <h3 data-v-eb61e746=""
+                                                        class="text-[13px] font-extrabold text-[var(--color-primary1)]">
+                                                        <span data-v-eb61e746="">Norwich City v West Bromwich
+                                                            Albion</span>
+                                                    </h3>
+                                                    <ul data-v-eb61e746="" class="flex-1">
+                                                        <li data-v-eb61e746="">
+                                                            <div data-v-eb61e746="" class="flex justify-between flex-1">
+                                                                <p data-v-eb61e746=""
+                                                                    class="text-xs font-bold text-[var(--color-grey44)]">
+                                                                    <span data-v-eb61e746="">Full Time Result</span>
+                                                                    (2<!---->)
+                                                                </p>
+                                                                <p data-v-eb61e746=""
+                                                                    class="text-xs pr-2 font-bold text-emerald-500">1.44
+                                                                </p>
+                                                            </div>
+                                                        </li>
+                                                        <li data-v-eb61e746="">
+                                                            <div data-v-eb61e746="" class="flex justify-between flex-1">
+                                                                <p data-v-eb61e746=""
+                                                                    class="text-xs font-bold text-[var(--color-grey44)]">
+                                                                    <span data-v-eb61e746="">Full Time Result</span>
+                                                                    (X<!---->)
+                                                                </p>
+                                                                <p data-v-eb61e746=""
+                                                                    class="text-xs pr-2 font-bold text-emerald-500">4.00
+                                                                </p>
+                                                            </div>
+                                                        </li>
+                                                        <li data-v-eb61e746="">
+                                                            <div data-v-eb61e746="" class="flex justify-between flex-1">
+                                                                <p data-v-eb61e746=""
+                                                                    class="text-xs font-bold text-[var(--color-grey44)]">
+                                                                    <span data-v-eb61e746="">Full Time Result</span>
+                                                                    (1<!---->)
+                                                                </p>
+                                                                <p data-v-eb61e746=""
+                                                                    class="text-xs pr-2 font-bold text-emerald-500">8.00
+                                                                </p>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li data-v-eb61e746="">
+                                            <div data-v-eb61e746="" class="flex-1 flex">
+                                                <div data-v-eb61e746="" class="px-2"><button data-v-eb61e746=""
+                                                        class="bs-XMark"></button></div>
+                                                <div data-v-eb61e746="" class="flex-1">
+                                                    <h3 data-v-eb61e746=""
+                                                        class="text-[13px] font-extrabold text-[var(--color-primary1)]">
+                                                        <span data-v-eb61e746="">Cd Guiniguada Apolinario W v Femarguin
+                                                            W</span>
+                                                    </h3>
+                                                    <ul data-v-eb61e746="" class="flex-1">
+                                                        <li data-v-eb61e746="">
+                                                            <div data-v-eb61e746="" class="flex justify-between flex-1">
+                                                                <p data-v-eb61e746=""
+                                                                    class="text-xs font-bold text-[var(--color-grey44)]">
+                                                                    <span data-v-eb61e746="">Full Time Result</span>
+                                                                    (1<!---->)
+                                                                </p>
+                                                                <p data-v-eb61e746=""
+                                                                    class="text-xs pr-2 font-bold text-red-600">1.10</p>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li data-v-eb61e746="">
+                                            <div data-v-eb61e746="" class="flex-1 flex">
+                                                <div data-v-eb61e746="" class="px-2"><button data-v-eb61e746=""
+                                                        class="bs-XMark"></button></div>
+                                                <div data-v-eb61e746="" class="flex-1">
+                                                    <h3 data-v-eb61e746=""
+                                                        class="text-[13px] font-extrabold text-[var(--color-primary1)]">
+                                                        <span data-v-eb61e746="">CFF Olympia Las Rozas W v Osasuna
+                                                            W</span>
+                                                    </h3>
+                                                    <ul data-v-eb61e746="" class="flex-1">
+                                                        <li data-v-eb61e746="">
+                                                            <div data-v-eb61e746="" class="flex justify-between flex-1">
+                                                                <p data-v-eb61e746=""
+                                                                    class="text-xs font-bold text-[var(--color-grey44)]">
+                                                                    <span data-v-eb61e746="">Full Time Result</span>
+                                                                    (X<!---->)
+                                                                </p>
+                                                                <p data-v-eb61e746=""
+                                                                    class="text-xs pr-2 font-bold text-red-600">5.01</p>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div data-v-eb61e746="" class="mt-1.5 flex justify-between items-center"><button
+                                        data-v-eb61e746=""
+                                        class="py-1.5 px-3 text-center text-red-600 font-bold text-[13px]"> Delete All
+                                    </button><!----><span data-v-eb61e746="" class="text-xs px-3">Bonus(5%)= 0.00</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div data-v-eb61e746="" class="flex"><!----><!----><button data-v-fab846b7="" data-v-eb61e746=""
+                                component="button" size="lg" loading="false"
+                                class="bet-btn text-center bg-placebet text-base w-full shadow relative bg-[var(--color-primary3)] text-black bet-btn text-center bg-placebet text-base w-full inline-flex items-center justify-center rounded-sm text-sm font-semibold focus:outline-none focus:ring ring-primary-200 h-9 px-3 bet-btn text-center bg-placebet text-base w-full shadow relative bg-[var(--color-primary3)] text-black bet-btn text-center bg-placebet text-base w-full"><!---->Accept
+                                Changes</button></div>
+                    </div>
+                </div>
+            </div>
+            <div data-v-5292eb01="" class="preload-spinner" style="display: none;"><img data-v-5292eb01=""
+                    src="/spinner.gif" alt="Loading..."></div>
+            <dialog
+                class="z-50 m-0 min-h-full min-w-full overflow-y-auto bg-transparent backdrop:bg-transparent rounded-lg">
+                <div class="fixed inset-0 overflow-y-auto z-50 flex items-center justify-center" scroll-region="">
+                    <div class="fixed inset-0 transform transition-all" style="display: none;">
+                        <div class="absolute inset-0 bg-gray-800 opacity-70"></div>
+                    </div>
+                    <div class="bg-white overflow-hidden shadow-xl transform transition-all sm:w-full sm:mx-auto relative sm:max-w-sm"
+                        style="display: none;">
+                        <div class="w-full flex items-end justify-end bg-[var(--color-primary1)]"><!----></div><!---->
+                    </div>
+                </div>
+            </dialog>
+        </div><!---->
+    </div>
+    <script>(function () { function c() { var b = a.contentDocument || a.contentWindow.document; if (b) { var d = b.createElement('script'); d.innerHTML = "window.__CF$cv$params={r:'987e02d6ecee4ef9',t:'MTc1OTM0MzIxNQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);"; b.getElementsByTagName('head')[0].appendChild(d) } } if (document.body) { var a = document.createElement('iframe'); a.height = 1; a.width = 1; a.style.position = 'absolute'; a.style.top = 0; a.style.left = 0; a.style.border = 'none'; a.style.visibility = 'hidden'; document.body.appendChild(a); if ('loading' !== document.readyState) c(); else if (window.addEventListener) document.addEventListener('DOMContentLoaded', c); else { var e = document.onreadystatechange || function () { }; document.onreadystatechange = function (b) { e(b); 'loading' !== document.readyState && (document.onreadystatechange = e, c()) } } } })();</script>
+    <iframe height="1" width="1"
+        style="position: absolute; top: 0px; left: 0px; border: none; visibility: hidden;"></iframe>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const btn = document.querySelector(".hm-MemberMenuIcon, .fa-user-circle");
+            const dropdown = document.querySelector(".absolute.z-50");
+
+            btn.addEventListener("click", () => {
+                if (dropdown.style.display === "none" || dropdown.style.display === "") {
+                    dropdown.style.display = "block";
+                } else {
+                    dropdown.style.display = "none";
+                }
+            });
+        });
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const tabs = document.querySelectorAll(".tab-item");
+
+            tabs.forEach(tab => {
+                tab.addEventListener("click", () => {
+                    // Remove 'active' class from all tabs
+                    tabs.forEach(t => t.classList.remove("active"));
+
+                    // Add 'active' class to the clicked tab
+                    tab.classList.add("active");
+                });
+            });
+        });
+    </script>
+
+    <!-- dropdown -->
+    <script>
+        const toggleBtn = document.getElementById("dropdownToggle");
+        const dropdown = document.getElementById("dropdownMenu");
+
+        toggleBtn.addEventListener("click", function () {
+            dropdown.style.display =
+                dropdown.style.display === "block" ? "none" : "block";
+        });
+
+        // Close when clicking outside
+        document.addEventListener("click", function (e) {
+            if (!toggleBtn.contains(e.target) && !dropdown.contains(e.target)) {
+                dropdown.style.display = "none";
+            }
+        });
+    </script>
+
+</body>
+
+</html>

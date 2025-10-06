@@ -1,0 +1,450 @@
+<html lang="en" th="green">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="viewport"
+        content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-touch-fullscreen" content="YES">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="mobile-web-app-capable" content="YES">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://api.livepulsepro.com/live-tracking.js"></script>
+    <title>Client</title>
+    <!-- <script type="module" crossorigin="" src="/assets/index-CbFWqHUF.js"></script> -->
+    <link rel="stylesheet" crossorigin="" href="/assets/style.css">
+</head>
+
+<body class="antialiased">
+    <div id="app" data-v-app="">
+        <div class="h-screen flex flex-col overflow-hidden">
+             <header data-v-5fa84cd1="" id="header" class="bg-header-mobile">
+                <div data-v-5fa84cd1="" class="grid grid-cols-3 py-3 px-4">
+                    <div data-v-5fa84cd1="">
+                        <div data-v-5fa84cd1="" class="max-w-max rounded-2xl border border-white/25 px-2.5 py-1.5">
+                            <div data-v-5fa84cd1="" class="text-[11px] font-extrabold text-white">Offers</div>
+                        </div>
+                    </div>
+                    <div data-v-5fa84cd1="" class="flex justify-center"><a data-v-5fa84cd1="" href="/"
+                            class="router-link-active"><img data-v-5fa84cd1="" class="hm-Logo" src="img/betzon.png"></a>
+                    </div>
+                   
+                    <!-- Header Right Section -->
+                    <!-- Header Right Side -->
+                    <div class="dropdown-wrapper flex justify-end">
+                        <!-- Toggle Button -->
+                        <button id="dropdownToggle" class="dropdown-toggle">
+                            <span class="balance">0.14 EUR</span>
+                            <i class="ri-user-line" style="font-size: 20px;"></i>
+                        </button>
+
+                        <!-- Dropdown Menu -->
+                        <div class="dropdown" id="dropdownMenu">
+                            <!-- Header inside dropdown -->
+                            <div class="dropdown-header">
+                                <p class="username">mt</p>
+                                <p class="user-balance">0.14 <span class="currency">EUR</span></p>
+                            </div>
+
+                            <!-- Links -->
+                            <a href="user_chat.html">Chat</a>
+                            <a href="user_finance.html">Finance</a>
+                            <a href="user_account.html">My Account</a>
+                            <a href="user_settings.html">Settings</a>
+                            <a href="user_terms.html">Terms & Conditions</a>
+                            <a href="user_password.html">Change Password</a>
+                            <button type="button">Log Out</button>
+                        </div>
+                    </div>
+                </div>
+                <nav data-v-5fa84cd1="" class="flex justify-between md:justify-center md:gap-10 px-8"><a
+                        data-v-5fa84cd1="" href="allSuport.html" class="router-link-active hm-Link py-3.5">All Sports</a><a
+                        data-v-5fa84cd1="" href="inplay_football.html"
+                        class="router-link-active router-link-exact-active hm-Link py-3.5"
+                        aria-current="page">In-Play</a><a data-v-5fa84cd1="" href="mybets.html" class="hm-Link py-3.5">My
+                        Bets</a><a data-v-5fa84cd1="" href="casino.html" class="hm-Link py-3.5">
+                        <div data-v-5fa84cd1="" class="relative">Casino <img data-v-5fa84cd1="" src="img/sh.png"
+                                class="w-6 h-6 absolute right-[-16px] top-[-16px]"></div>
+                    </a></nav>
+            </header>
+            <main class="pageView w-full flex-1 overflow-auto"><!---->
+                <div data-v-939dc76f="" data-v-d44cb237=""
+                    class="bg-[var(--color-grey3)] relative lv-SportsContainer lv-SportsContainerActive-54094">
+                    <ul data-v-939dc76f="" class="lv-SportsBar">
+                        <li data-v-939dc76f=""
+                            class="lv-SportBarItem lv-SportBarItem lv-SportsContainerActive-6046 lv-SportBarItemFilter">
+                            <div data-v-939dc76f="" class="flex flex-col items-center py-3"><img data-v-939dc76f=""
+                                    src="img/6046.svg" class="w-6 h-6">
+                                <a href="inplay_football.html">
+                                    <p data-v-939dc76f="" class="mt-1 text-[11px] text-white font-bold">Football</p>
+                                </a>
+                            </div>
+                        </li>
+                        <li data-v-939dc76f=""
+                            class="lv-SportBarItem lv-SportBarItem lv-SportsContainerActive-6046 lv-SportBarItemInactive">
+                            <div data-v-939dc76f="" class="flex flex-col items-center py-3"><img data-v-939dc76f=""
+                                    src="img/48242.svg" class="w-6 h-6">
+                                <a href="inplay_basketball.html">
+                                    <p data-v-939dc76f="" class="mt-1 text-[11px] text-white font-bold">Basketball</p>
+                                </a>
+                            </div>
+                        </li>
+                        <li data-v-939dc76f=""
+                            class="lv-SportBarItem lv-SportBarItem lv-SportsContainerActive-6046 lv-SportBarItemInactive">
+                            <div data-v-939dc76f="" class="flex flex-col items-center py-3"><img data-v-939dc76f=""
+                                    src="img/54094.svg" class="w-6 h-6">
+                                <a href="inplay_tennis.html">
+                                    <p data-v-939dc76f="" class="mt-1 text-[11px] text-white font-bold">Tennis</p>
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div data-v-d44cb237="" class="flex flex-1">
+                    <section data-v-d44cb237="" class="lv-SportEvents lv-SportEvents-54094">
+                        <div data-v-d44cb237="" class="py-3 px-2 xl:px-6 flex items-center justify-between">
+                            <h3 data-v-d44cb237="" class="text-xl text-white font-bold italic">Tennis</h3>
+                            <div data-v-d44cb237="" class="SearchInput">
+                                <div data-v-d44cb237="" class="SearchInput_Icon"></div><input data-v-d44cb237=""
+                                    id="searchInput" class="SearchInput_Field" placeholder="Search..." type="search">
+                            </div>
+                        </div>
+                        <div data-v-35ea0cba="" data-v-d44cb237=""
+                            class="bg-[var(--color-white7)] min-h-9 grid grid-cols-2 px-2 xl:pl-7">
+                            <p data-v-35ea0cba="" class="mdg-Text">
+                            <div ev-Participant class="flex items-center" style="color: white;"><img src="img/248.svg"
+                                    class="w-4 h-4 rounded-full mr-2 ev-Participant" alt=""> International - UTR Pro
+                                Tennis Series |
+                                Men</div>
+                            </p>
+                            <div data-v-35ea0cba="" class="grid grid-cols-2 text-center">
+                                <p data-v-35ea0cba="" class="mdg-Text">1</p>
+                                <p data-v-35ea0cba="" class="mdg-Text">2</p>
+                            </div>
+                        </div>
+                        <ul id="matchList" class="list-none divide-y divide-neutral-500/25">
+                            <li data-v-d44cb237="">
+                                <div data-v-645cd0d6="" data-v-d44cb237="" class="ev-Box" live="true">
+                                    <div data-v-645cd0d6=""
+                                        class="px-2 xl:px-7 my-3.5 flex gap-1 border-r border-neutral-600/50">
+                                        <div data-v-645cd0d6="" class="overflow-hidden">
+                                            <div data-v-645cd0d6="" class="ev-Teams">
+                                                <div data-v-645cd0d6="" class="flex items-center gap-1">
+                                                    <div data-v-645cd0d6="" class="w-[11px] h-[11px] min-w-[11px]"><svg
+                                                            data-v-645cd0d6="" xmlns="http://www.w3.org/2000/svg"
+                                                            viewBox="0 0 500 500">
+                                                            <g fill="none" fill-rule="evenodd">
+                                                                <path d="M0 0h500v500H0z"></path>
+                                                                <path fill="#939393"
+                                                                    d="M203.0033 109.223h93.6432V21.928h-93.6432z">
+                                                                </path>
+                                                                <path fill="#B1B1B1"
+                                                                    d="M202.8636 32.228h93.4586v-14.2h-93.4586z"></path>
+                                                                <path
+                                                                    d="M87.5475 75.2585s-40.7627 72.8-58.5475 127.77c4.445 13.375 45.2077 40.86 85.2322 37.885 13.3398-36.4 24.4596-52 24.4596-52s2.9633-95.085-51.1443-113.655m323.9252 0s40.7628 72.8 58.5475 127.77c-4.445 13.375-45.2077 40.86-85.2321 37.885-13.3399-36.4-24.4597-52-24.4597-52s-2.9633-95.085 51.1443-113.655"
+                                                                    fill="#BFBFBF"></path>
+                                                                <path
+                                                                    d="M249.5111 57.7025c-50.0817 0-47.7981-39.469-48.7426-39.14-7.5158 2.6187-24.1326 14.9368-52.4385 25.495-31.8729 11.885-52.626 19.315-60.7825 31.2 11.1149 8.915 46.6944 28.97 46.6944 120.345v271.14s49.6576 14.855 114.885 14.855c68.9291 0 115.6484-14.855 115.6484-14.855v-271.14c0-91.375 35.5795-111.43 46.6994-120.345-8.1566-11.885-28.9096-19.315-60.7825-31.2-28.3599-10.5767-44.9818-22.9194-52.478-25.5106-.9273-.3184 4.1773 39.1556-48.703 39.1556z"
+                                                                    fill="#BFBFBF"></path>
+                                                                <path
+                                                                    d="M293.7332 37.2606c45.26 11.3356 71.506 39.3368 71.506 67.9813v72.909c-.3012 5.4992-.4609 11.3004-.4609 17.4216v271.14s-46.7193 14.855-115.6483 14.855c-65.2275 0-114.8851-14.855-114.8851-14.855v-271.14c0-6.2616-.167-12.1883-.482-17.7995v-72.531c0-28.836 26.5982-57.0201 72.4166-68.202 5.5957 10.1262 17.4956 20.6326 43.3346 20.6326 27.0815 0 38.955-10.353 44.2191-20.4119z"
+                                                                    fill="#E7E7E7"></path>
+                                                                <path
+                                                                    d="M307.8516 23.345c-5.772-3.24-9.728-5.345-12.0078-5.345 0 0 5.8817 32.495-46.3352 32.495-48.5202 0-46.3352-32.495-46.3352-32.495-2.2798 0-6.2358 2.105-12.0028 5.345 0 0 7.3683 40.38 58.4029 40.38 51.4785 0 58.2781-35.895 58.2781-40.38z"
+                                                                    fill="#E7E7E7"></path>
+                                                                <path
+                                                                    d="M413.5843 238.3227c-9.2877 2.2382-19.0646 3.3161-28.7978 2.5926-8.1978-22.369-15.5572-36.883-20.0128-44.7484v270.5774s-21.1022 6.7098-55.8664 11.1104c-.1817-.0197-.363-.0396-.544-.0597 1.8808-54.795 5.7221-166.47 8.2763-240.705 2.0554-59.755 31.0847-95.29 60.099-117.44-2.6753 6.7806-5.0714 14.6063-6.9991 23.6673 7.354 11.8514 24.4358 42.0686 43.8307 94.964.005.014.0097.0277.014.0414zM190.7166 477.7953c-34.2478-4.4014-56.4763-11.051-56.4763-11.051V196.1721c-4.4558 7.8668-11.8138 22.3792-20.0097 44.7432-9.633.716-19.3087-.3323-28.5106-2.5238a1.113 1.113 0 01.0199-.0967c19.3773-52.8475 36.3054-83.0661 43.6098-94.9437-1.929-9.0753-4.3277-16.912-7.0064-23.7011 29.0144 22.15 58.0437 57.685 60.099 117.44 2.5543 74.235 6.3956 185.91 8.2763 240.7053h-.002z"
+                                                                    fill-opacity=".08" fill="#000"></path>
+                                                                <path
+                                                                    d="M290.037 122.2c8.4065-2.1333 14.7878-3.2 19.144-3.2 4.356 0 10.7374 1.0667 19.1438 3.2 3.3294 18.336-3.0519 33.2693-19.1438 44.8-16.092-11.5275-22.4733-26.4608-19.144-44.8z"
+                                                                    fill="#A1A1A1"></path>
+                                                            </g>
+                                                        </svg></div>
+                                                    <p data-v-645cd0d6="" class="ev-Participant">Tomas Agustin Galera
+                                                    </p><!----><!---->
+                                                </div>
+                                                <div data-v-645cd0d6="" class="flex items-center gap-1">
+                                                    <div data-v-645cd0d6="" class="w-[11px] h-[11px] min-w-[11px]"><svg
+                                                            data-v-645cd0d6="" xmlns="http://www.w3.org/2000/svg"
+                                                            viewBox="0 0 500 500">
+                                                            <g fill="none" fill-rule="evenodd">
+                                                                <path d="M0 0h500v500H0z"></path>
+                                                                <path fill="#939393"
+                                                                    d="M203.0033 109.223h93.6432V21.928h-93.6432z">
+                                                                </path>
+                                                                <path fill="#B1B1B1"
+                                                                    d="M202.8636 32.228h93.4586v-14.2h-93.4586z"></path>
+                                                                <path
+                                                                    d="M87.5475 75.2585s-40.7627 72.8-58.5475 127.77c4.445 13.375 45.2077 40.86 85.2322 37.885 13.3398-36.4 24.4596-52 24.4596-52s2.9633-95.085-51.1443-113.655m323.9252 0s40.7628 72.8 58.5475 127.77c-4.445 13.375-45.2077 40.86-85.2321 37.885-13.3399-36.4-24.4597-52-24.4597-52s-2.9633-95.085 51.1443-113.655"
+                                                                    fill="#E7E7E7"></path>
+                                                                <path
+                                                                    d="M249.5111 57.7025c-50.0817 0-47.7981-39.469-48.7426-39.14-7.5158 2.6187-24.1326 14.9368-52.4385 25.495-31.8729 11.885-52.626 19.315-60.7825 31.2 11.1149 8.915 46.6944 28.97 46.6944 120.345v271.14s49.6576 14.855 114.885 14.855c68.9291 0 115.6484-14.855 115.6484-14.855v-271.14c0-91.375 35.5795-111.43 46.6994-120.345-8.1566-11.885-28.9096-19.315-60.7825-31.2-28.3599-10.5767-44.9818-22.9194-52.478-25.5106-.9273-.3184 4.1773 39.1556-48.703 39.1556z"
+                                                                    fill="#E7E7E7"></path>
+                                                                <path
+                                                                    d="M293.7332 37.2606c45.26 11.3356 71.506 39.3368 71.506 67.9813v72.909c-.3012 5.4992-.4609 11.3004-.4609 17.4216v271.14s-46.7193 14.855-115.6483 14.855c-65.2275 0-114.8851-14.855-114.8851-14.855v-271.14c0-6.2616-.167-12.1883-.482-17.7995v-72.531c0-28.836 26.5982-57.0201 72.4166-68.202 5.5957 10.1262 17.4956 20.6326 43.3346 20.6326 27.0815 0 38.955-10.353 44.2191-20.4119z"
+                                                                    fill="#BFBFBF"></path>
+                                                                <path
+                                                                    d="M307.8516 23.345c-5.772-3.24-9.728-5.345-12.0078-5.345 0 0 5.8817 32.495-46.3352 32.495-48.5202 0-46.3352-32.495-46.3352-32.495-2.2798 0-6.2358 2.105-12.0028 5.345 0 0 7.3683 40.38 58.4029 40.38 51.4785 0 58.2781-35.895 58.2781-40.38z"
+                                                                    fill="#BFBFBF"></path>
+                                                                <path
+                                                                    d="M413.5843 238.3227c-9.2877 2.2382-19.0646 3.3161-28.7978 2.5926-8.1978-22.369-15.5572-36.883-20.0128-44.7484v270.5774s-21.1022 6.7098-55.8664 11.1104c-.1817-.0197-.363-.0396-.544-.0597 1.8808-54.795 5.7221-166.47 8.2763-240.705 2.0554-59.755 31.0847-95.29 60.099-117.44-2.6753 6.7806-5.0714 14.6063-6.9991 23.6673 7.354 11.8514 24.4358 42.0686 43.8307 94.964.005.014.0097.0277.014.0414zM190.7166 477.7953c-34.2478-4.4014-56.4763-11.051-56.4763-11.051V196.1721c-4.4558 7.8668-11.8138 22.3792-20.0097 44.7432-9.633.716-19.3087-.3323-28.5106-2.5238a1.113 1.113 0 01.0199-.0967c19.3773-52.8475 36.3054-83.0661 43.6098-94.9437-1.929-9.0753-4.3277-16.912-7.0064-23.7011 29.0144 22.15 58.0437 57.685 60.099 117.44 2.5543 74.235 6.3956 185.91 8.2763 240.7053h-.002z"
+                                                                    fill-opacity=".08" fill="#000"></path>
+                                                                <circle fill="#A1A1A1" cx="309" cy="143" r="22">
+                                                                </circle>
+                                                            </g>
+                                                        </svg></div>
+                                                    <p data-v-645cd0d6="" class="ev-Participant">Fantino Alberca De Las
+                                                        Casas</p><!----><!---->
+                                                </div>
+                                            </div><!---->
+                                            <div data-v-645cd0d6="" class="ev-Time">
+                                                <p data-v-645cd0d6="" class="text-[11px] text-white opacity-75">-1'</p>
+                                                <div data-v-645cd0d6=""
+                                                    class="text-[11px] bg-[var(--color-primary5)] font-bold px-0.5 rounded-sm flex items-center h-3 ml-2">
+                                                    <span data-v-645cd0d6="">52 »</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div data-v-645cd0d6="" class="ml-auto">
+                                            <div data-v-645cd0d6="" class="ev-ScoreBox">0</div>
+                                            <div data-v-645cd0d6="" class="ev-ScoreBox mt-0.5">1</div>
+                                        </div><button data-v-645cd0d6="" class="ev-StatIconTrigger hidden xl:block">
+                                            <div data-v-645cd0d6="" class="ev-StatIcon"></div>
+                                        </button>
+                                    </div>
+                                    <div data-v-645cd0d6="">
+                                        <ul data-v-645cd0d6="" class="list-none flex h-full">
+                                            <li data-v-645cd0d6="" class="flex-1">
+                                                <div data-v-03867fb3="" data-v-645cd0d6=""
+                                                    class="h-full flex flex-col items-center justify-center cursor-pointer odd w-full hover:bg-[var(--color-white15)]">
+                                                    <p data-v-03867fb3=""
+                                                        class="text-[13px] text-[var(--color-yellow1)]"><!----><span
+                                                            data-v-03867fb3="" class="text-[13px] mt-1">8.25</span></p>
+                                                </div>
+                                            </li>
+                                            <li data-v-645cd0d6="" class="flex-1">
+                                                <div data-v-03867fb3="" data-v-645cd0d6=""
+                                                    class="h-full flex flex-col items-center justify-center cursor-pointer odd w-full hover:bg-[var(--color-white15)]">
+                                                    <p data-v-03867fb3=""
+                                                        class="text-[13px] text-[var(--color-yellow1)]"><!----><span
+                                                            data-v-03867fb3="" class="text-[13px] mt-1">1.07</span></p>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li data-v-d44cb237="">
+                                <div data-v-645cd0d6="" data-v-d44cb237="" class="ev-Box" live="true">
+                                    <div data-v-645cd0d6=""
+                                        class="px-2 xl:px-7 my-3.5 flex gap-1 border-r border-neutral-600/50">
+                                        <div data-v-645cd0d6="" class="overflow-hidden">
+                                            <div data-v-645cd0d6="" class="ev-Teams">
+                                                <div data-v-645cd0d6="" class="flex items-center gap-1">
+                                                    <div data-v-645cd0d6="" class="w-[11px] h-[11px] min-w-[11px]"><svg
+                                                            data-v-645cd0d6="" xmlns="http://www.w3.org/2000/svg"
+                                                            viewBox="0 0 500 500">
+                                                            <g fill="none" fill-rule="evenodd">
+                                                                <path d="M0 0h500v500H0z"></path>
+                                                                <path fill="#939393"
+                                                                    d="M203.0033 109.223h93.6432V21.928h-93.6432z">
+                                                                </path>
+                                                                <path fill="#B1B1B1"
+                                                                    d="M202.8636 32.228h93.4586v-14.2h-93.4586z"></path>
+                                                                <path
+                                                                    d="M87.5475 75.2585s-40.7627 72.8-58.5475 127.77c4.445 13.375 45.2077 40.86 85.2322 37.885 13.3398-36.4 24.4596-52 24.4596-52s2.9633-95.085-51.1443-113.655m323.9252 0s40.7628 72.8 58.5475 127.77c-4.445 13.375-45.2077 40.86-85.2321 37.885-13.3399-36.4-24.4597-52-24.4597-52s-2.9633-95.085 51.1443-113.655"
+                                                                    fill="#BFBFBF"></path>
+                                                                <path
+                                                                    d="M249.5111 57.7025c-50.0817 0-47.7981-39.469-48.7426-39.14-7.5158 2.6187-24.1326 14.9368-52.4385 25.495-31.8729 11.885-52.626 19.315-60.7825 31.2 11.1149 8.915 46.6944 28.97 46.6944 120.345v271.14s49.6576 14.855 114.885 14.855c68.9291 0 115.6484-14.855 115.6484-14.855v-271.14c0-91.375 35.5795-111.43 46.6994-120.345-8.1566-11.885-28.9096-19.315-60.7825-31.2-28.3599-10.5767-44.9818-22.9194-52.478-25.5106-.9273-.3184 4.1773 39.1556-48.703 39.1556z"
+                                                                    fill="#BFBFBF"></path>
+                                                                <path
+                                                                    d="M293.7332 37.2606c45.26 11.3356 71.506 39.3368 71.506 67.9813v72.909c-.3012 5.4992-.4609 11.3004-.4609 17.4216v271.14s-46.7193 14.855-115.6483 14.855c-65.2275 0-114.8851-14.855-114.8851-14.855v-271.14c0-6.2616-.167-12.1883-.482-17.7995v-72.531c0-28.836 26.5982-57.0201 72.4166-68.202 5.5957 10.1262 17.4956 20.6326 43.3346 20.6326 27.0815 0 38.955-10.353 44.2191-20.4119z"
+                                                                    fill="#E7E7E7"></path>
+                                                                <path
+                                                                    d="M307.8516 23.345c-5.772-3.24-9.728-5.345-12.0078-5.345 0 0 5.8817 32.495-46.3352 32.495-48.5202 0-46.3352-32.495-46.3352-32.495-2.2798 0-6.2358 2.105-12.0028 5.345 0 0 7.3683 40.38 58.4029 40.38 51.4785 0 58.2781-35.895 58.2781-40.38z"
+                                                                    fill="#E7E7E7"></path>
+                                                                <path
+                                                                    d="M413.5843 238.3227c-9.2877 2.2382-19.0646 3.3161-28.7978 2.5926-8.1978-22.369-15.5572-36.883-20.0128-44.7484v270.5774s-21.1022 6.7098-55.8664 11.1104c-.1817-.0197-.363-.0396-.544-.0597 1.8808-54.795 5.7221-166.47 8.2763-240.705 2.0554-59.755 31.0847-95.29 60.099-117.44-2.6753 6.7806-5.0714 14.6063-6.9991 23.6673 7.354 11.8514 24.4358 42.0686 43.8307 94.964.005.014.0097.0277.014.0414zM190.7166 477.7953c-34.2478-4.4014-56.4763-11.051-56.4763-11.051V196.1721c-4.4558 7.8668-11.8138 22.3792-20.0097 44.7432-9.633.716-19.3087-.3323-28.5106-2.5238a1.113 1.113 0 01.0199-.0967c19.3773-52.8475 36.3054-83.0661 43.6098-94.9437-1.929-9.0753-4.3277-16.912-7.0064-23.7011 29.0144 22.15 58.0437 57.685 60.099 117.44 2.5543 74.235 6.3956 185.91 8.2763 240.7053h-.002z"
+                                                                    fill-opacity=".08" fill="#000"></path>
+                                                                <path
+                                                                    d="M290.037 122.2c8.4065-2.1333 14.7878-3.2 19.144-3.2 4.356 0 10.7374 1.0667 19.1438 3.2 3.3294 18.336-3.0519 33.2693-19.1438 44.8-16.092-11.5275-22.4733-26.4608-19.144-44.8z"
+                                                                    fill="#A1A1A1"></path>
+                                                            </g>
+                                                        </svg></div>
+                                                    <p data-v-645cd0d6="" class="ev-Participant">Rocco Valente</p>
+                                                    <!----><!---->
+                                                </div>
+                                                <div data-v-645cd0d6="" class="flex items-center gap-1">
+                                                    <div data-v-645cd0d6="" class="w-[11px] h-[11px] min-w-[11px]"><svg
+                                                            data-v-645cd0d6="" xmlns="http://www.w3.org/2000/svg"
+                                                            viewBox="0 0 500 500">
+                                                            <g fill="none" fill-rule="evenodd">
+                                                                <path d="M0 0h500v500H0z"></path>
+                                                                <path fill="#939393"
+                                                                    d="M203.0033 109.223h93.6432V21.928h-93.6432z">
+                                                                </path>
+                                                                <path fill="#B1B1B1"
+                                                                    d="M202.8636 32.228h93.4586v-14.2h-93.4586z"></path>
+                                                                <path
+                                                                    d="M87.5475 75.2585s-40.7627 72.8-58.5475 127.77c4.445 13.375 45.2077 40.86 85.2322 37.885 13.3398-36.4 24.4596-52 24.4596-52s2.9633-95.085-51.1443-113.655m323.9252 0s40.7628 72.8 58.5475 127.77c-4.445 13.375-45.2077 40.86-85.2321 37.885-13.3399-36.4-24.4597-52-24.4597-52s-2.9633-95.085 51.1443-113.655"
+                                                                    fill="#E7E7E7"></path>
+                                                                <path
+                                                                    d="M249.5111 57.7025c-50.0817 0-47.7981-39.469-48.7426-39.14-7.5158 2.6187-24.1326 14.9368-52.4385 25.495-31.8729 11.885-52.626 19.315-60.7825 31.2 11.1149 8.915 46.6944 28.97 46.6944 120.345v271.14s49.6576 14.855 114.885 14.855c68.9291 0 115.6484-14.855 115.6484-14.855v-271.14c0-91.375 35.5795-111.43 46.6994-120.345-8.1566-11.885-28.9096-19.315-60.7825-31.2-28.3599-10.5767-44.9818-22.9194-52.478-25.5106-.9273-.3184 4.1773 39.1556-48.703 39.1556z"
+                                                                    fill="#E7E7E7"></path>
+                                                                <path
+                                                                    d="M293.7332 37.2606c45.26 11.3356 71.506 39.3368 71.506 67.9813v72.909c-.3012 5.4992-.4609 11.3004-.4609 17.4216v271.14s-46.7193 14.855-115.6483 14.855c-65.2275 0-114.8851-14.855-114.8851-14.855v-271.14c0-6.2616-.167-12.1883-.482-17.7995v-72.531c0-28.836 26.5982-57.0201 72.4166-68.202 5.5957 10.1262 17.4956 20.6326 43.3346 20.6326 27.0815 0 38.955-10.353 44.2191-20.4119z"
+                                                                    fill="#BFBFBF"></path>
+                                                                <path
+                                                                    d="M307.8516 23.345c-5.772-3.24-9.728-5.345-12.0078-5.345 0 0 5.8817 32.495-46.3352 32.495-48.5202 0-46.3352-32.495-46.3352-32.495-2.2798 0-6.2358 2.105-12.0028 5.345 0 0 7.3683 40.38 58.4029 40.38 51.4785 0 58.2781-35.895 58.2781-40.38z"
+                                                                    fill="#BFBFBF"></path>
+                                                                <path
+                                                                    d="M413.5843 238.3227c-9.2877 2.2382-19.0646 3.3161-28.7978 2.5926-8.1978-22.369-15.5572-36.883-20.0128-44.7484v270.5774s-21.1022 6.7098-55.8664 11.1104c-.1817-.0197-.363-.0396-.544-.0597 1.8808-54.795 5.7221-166.47 8.2763-240.705 2.0554-59.755 31.0847-95.29 60.099-117.44-2.6753 6.7806-5.0714 14.6063-6.9991 23.6673 7.354 11.8514 24.4358 42.0686 43.8307 94.964.005.014.0097.0277.014.0414zM190.7166 477.7953c-34.2478-4.4014-56.4763-11.051-56.4763-11.051V196.1721c-4.4558 7.8668-11.8138 22.3792-20.0097 44.7432-9.633.716-19.3087-.3323-28.5106-2.5238a1.113 1.113 0 01.0199-.0967c19.3773-52.8475 36.3054-83.0661 43.6098-94.9437-1.929-9.0753-4.3277-16.912-7.0064-23.7011 29.0144 22.15 58.0437 57.685 60.099 117.44 2.5543 74.235 6.3956 185.91 8.2763 240.7053h-.002z"
+                                                                    fill-opacity=".08" fill="#000"></path>
+                                                                <circle fill="#A1A1A1" cx="309" cy="143" r="22">
+                                                                </circle>
+                                                            </g>
+                                                        </svg></div>
+                                                    <p data-v-645cd0d6="" class="ev-Participant">Elias Grubert</p>
+                                                    <!----><!---->
+                                                </div>
+                                            </div><!---->
+                                            <div data-v-645cd0d6="" class="ev-Time">
+                                                <p data-v-645cd0d6="" class="text-[11px] text-white opacity-75">-1'</p>
+                                                <div data-v-645cd0d6=""
+                                                    class="text-[11px] bg-[var(--color-primary5)] font-bold px-0.5 rounded-sm flex items-center h-3 ml-2">
+                                                    <span data-v-645cd0d6="">47 »</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div data-v-645cd0d6="" class="ml-auto">
+                                            <div data-v-645cd0d6="" class="ev-ScoreBox">0</div>
+                                            <div data-v-645cd0d6="" class="ev-ScoreBox mt-0.5">0</div>
+                                        </div><button data-v-645cd0d6="" class="ev-StatIconTrigger hidden xl:block">
+                                            <div data-v-645cd0d6="" class="ev-StatIcon"></div>
+                                        </button>
+                                    </div>
+                                    <div data-v-645cd0d6="">
+                                        <ul data-v-645cd0d6="" class="list-none flex h-full">
+                                            <li data-v-645cd0d6="" class="flex-1">
+                                                <div data-v-03867fb3="" data-v-645cd0d6=""
+                                                    class="h-full flex flex-col items-center justify-center cursor-pointer odd w-full hover:bg-[var(--color-white15)]">
+                                                    <p data-v-03867fb3=""
+                                                        class="text-[13px] text-[var(--color-yellow1)]"><!----><span
+                                                            data-v-03867fb3="" class="text-[13px] mt-1">1.10</span></p>
+                                                </div>
+                                            </li>
+                                            <li data-v-645cd0d6="" class="flex-1">
+                                                <div data-v-03867fb3="" data-v-645cd0d6=""
+                                                    class="h-full flex flex-col items-center justify-center cursor-pointer odd w-full hover:bg-[var(--color-white15)]">
+                                                    <p data-v-03867fb3=""
+                                                        class="text-[13px] text-[var(--color-yellow1)]"><!----><span
+                                                            data-v-03867fb3="" class="text-[13px] mt-1">6.00</span></p>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul><!---->
+                    </section><!---->
+                </div>
+                <footer class="px-4 py-3 max-w-xl mx-auto h-auto">
+                    <div class="text-center">
+                        <div class="h-12 flex justify-center">
+                            <div class="hm-Logo h-12"></div>
+                        </div>
+                        <div class="mb-4 space-y-2">
+                            <div class="max-w-xl w-full"><select
+                                    class="py-2.5 bg-white rounded-sm font-bold text-base text-black border-0 focus:ring-0 shadow-sm text-sm w-full">
+                                    <option value="de">German</option>
+                                    <option value="en">English</option>
+                                    <option value="it">Italian</option>
+                                    <option value="gr">Greek</option>
+                                    <option value="sq">Albanian</option>
+                                    <option value="es">Spanish</option>
+                                    <option value="tr">Turkish</option>
+                                    <option value="fr">French</option>
+                                    <option value="ar">Arabic</option>
+                                </select></div>
+                            <div class="max-w-xl w-full"><select
+                                    class="py-2.5 bg-white rounded-sm font-bold text-base text-black border-0 focus:ring-0 shadow-sm text-sm w-full">
+                                    <option value="p">Decimal</option>
+                                    <option value="puk">Fractional</option>
+                                    <option value="pus">American</option>
+                                </select></div>
+                        </div>
+                        <div><small class="text-neutral-500 space-y-3 text-[11px]">
+                                <p>This site uses its own and third-party cookies to improve services, analyze and
+                                    personalize your preferences. If you continue to browse, we consider that you accept
+                                    cookies. You can change the settings and get more information in the Cookie Policy.
+                                    Access to online gambling in some countries is prohibited by law. It is the player's
+                                    responsibility to ensure that he is acting in accordance with the law when accessing
+                                    this site.</p>
+                                <p>Gambling has economic consequences and addiction. Play responsibly.</p>
+                                <p>© 2016-2025. All rights reserved.</p>
+                            </small></div>
+                        <div class="flex items-center justify-center"><a href="https://www.responsiblegambling.org/"
+                                target="_blank"><img src="/plus21.svg" class="w-[32px] cursor-pointer my-5 mx-4"></a>
+                        </div>
+                    </div>
+                </footer>
+            </main>
+            <div data-v-5292eb01="" data-v-eb61e746="" class="preload-spinner" style="display: none;"><img
+                    data-v-5292eb01="" src="/spinner.gif" alt="Loading..."></div><!----><!---->
+            <div data-v-5292eb01="" class="preload-spinner" style="display: none;"><img data-v-5292eb01=""
+                    src="/spinner.gif" alt="Loading..."></div>
+            <dialog
+                class="z-50 m-0 min-h-full min-w-full overflow-y-auto bg-transparent backdrop:bg-transparent rounded-lg">
+                <div class="fixed inset-0 overflow-y-auto z-50 flex items-center justify-center" scroll-region="">
+                    <div class="fixed inset-0 transform transition-all" style="display: none;">
+                        <div class="absolute inset-0 bg-gray-800 opacity-70"></div>
+                    </div>
+                    <div class="bg-white overflow-hidden shadow-xl transform transition-all sm:w-full sm:mx-auto relative sm:max-w-sm"
+                        style="display: none;">
+                        <div class="w-full flex items-end justify-end bg-[var(--color-primary1)]"><!----></div><!---->
+                    </div>
+                </div>
+            </dialog>
+        </div><!---->
+    </div>
+
+     <!-- searchbar -->
+    <script>
+        document.getElementById("searchInput").addEventListener("input", function () {
+            let filter = this.value.toLowerCase().trim();
+            let listItems = document.querySelectorAll("#matchList li");
+
+            listItems.forEach(function (item) {
+                let text = item.textContent.toLowerCase().trim();
+
+                // agar input empty hai to sab show ho
+                if (filter === "" || text.includes(filter)) {
+                    item.style.display = "";
+                } else {
+                    item.style.display = "none";
+                }
+            });
+        });
+    </script>
+
+<!-- dropdown -->
+    <script>
+        const toggleBtn = document.getElementById("dropdownToggle");
+        const dropdown = document.getElementById("dropdownMenu");
+
+        toggleBtn.addEventListener("click", function () {
+            dropdown.style.display =
+                dropdown.style.display === "block" ? "none" : "block";
+        });
+
+        // Close when clicking outside
+        document.addEventListener("click", function (e) {
+            if (!toggleBtn.contains(e.target) && !dropdown.contains(e.target)) {
+                dropdown.style.display = "none";
+            }
+        });
+    </script>
+
+</body>
+
+</html>
